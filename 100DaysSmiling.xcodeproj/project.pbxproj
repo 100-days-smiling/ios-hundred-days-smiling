@@ -74,7 +74,6 @@
 				277EF54F0318C4837A9ABA2B /* Pods-100DaysSmilingTests.debug.xcconfig */,
 				4EB1989BEEDA2F5B3D22853B /* Pods-100DaysSmilingTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -181,6 +180,11 @@
 				TargetAttributes = {
 					45D808D922BD41D40000BB7D = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					45D808ED22BD41D50000BB7D = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -450,7 +454,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.felipe.-00DaysSmiling";
+				PRODUCT_BUNDLE_IDENTIFIER = com.felipe.100DaysSmiling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -469,7 +473,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.felipe.-00DaysSmiling";
+				PRODUCT_BUNDLE_IDENTIFIER = com.felipe.100DaysSmiling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
