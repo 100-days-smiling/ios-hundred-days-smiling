@@ -1,11 +1,10 @@
 platform :ios, '11.0'
 
 target '100DaysSmiling' do
-  # Comment the next line if you don't want to use dynamic frameworks
+  # Pods for 100DaysSmiling
   use_frameworks!
   pod 'OAuthSwift', '~> 2.0.0'
-  
-  # Pods for 100DaysSmiling
+  pod 'Swinject'
 
   target '100DaysSmilingTests' do
     inherit! :search_paths
