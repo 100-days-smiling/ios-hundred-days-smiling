@@ -24,7 +24,7 @@ class APITwitterService {
         
         oauthSwift.authorizeURLHandler = OAuthSwiftOpenURLExternally.sharedInstance
         let _ = oauthSwift.authorize(
-        withCallbackURL: URL(string: "http://oauthswift.herokuapp.com/callback/twitter")!) { [weak self] result in
+        withCallbackURL: URL(string: "hundreddayssmiling")!) { [weak self] result in
             switch result {
             case .success(let (credential, _, _)):
                 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Swinject
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let container = Container()
+        AuthenticationContainer().setupContainer(with: container)
+        let twitterService = container.resolve(APITwitterService.self)
+        twitterService?.requestAuthotization(view: self)
+    }
 }
 
