@@ -17,15 +17,19 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Reorganize to when use the properly handle of the instance initialization
+        // TODO: Felipe - Reorganize to when use the properly handle of the instance initialization
         twitterService = AppDelegate.container.resolve(APITwitterService.self)!
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    @IBAction func loginRegister() {
         twitterService?.requestAuthotization(using: { oauth -> SafariURLHandler in
             return showSafari(using: oauth)
         })
+    }
+    
+    @IBAction func dashboard() {
+        let dashboard = DashboardViewController()
+        self.present(dashboard, animated: true, completion: nil)
     }
     
     func showSafari(using oauth: OAuth1Swift) -> SafariURLHandler {
@@ -48,4 +52,3 @@ class ViewController: UIViewController {
         return handler
     }
 }
-
