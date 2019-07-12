@@ -5,7 +5,7 @@ target '100DaysSmiling' do
   use_frameworks!
   pod 'OAuthSwift', '~> 2.0.0'
   pod 'Swinject'
-  pod 'Default'
+  pod 'SwiftyUserDefaults'
 
   target '100DaysSmilingTests' do
     inherit! :search_paths
