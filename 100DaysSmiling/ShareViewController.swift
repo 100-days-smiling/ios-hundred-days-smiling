@@ -16,14 +16,20 @@ extension DefaultsKeys {
 
 class ShareViewController: UIViewController {
     @IBAction func didTapShare(_ sender: Any) {
+        presentShareActivity()
+    }
+    
+    private func presentShareActivity() {
+        let activityViewController = UIActivityViewController(activityItems: shareData(), applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
+    private func shareData() -> [Any] {
         let day = numberOfDays()
         let text = "Day \(day) of #100dayssmiling"
         let image: UIImage = UIImage(named: "splash_screen_smile")!
-        let shareAll: [Any] = [text, image]
-        let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
-        activityViewController.popoverPresentationController?.sourceView = self.view
-        
-        self.present(activityViewController, animated: true, completion: nil)
+        return [text, image]
     }
     
     private func numberOfDays() -> Int {
