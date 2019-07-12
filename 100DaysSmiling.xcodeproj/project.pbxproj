@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0584C4A522D8875C008FE4DA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584C4A422D8875C008FE4DA /* CameraViewController.swift */; };
+		0584C4A722D88799008FE4DA /* CameraViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0584C4A622D88799008FE4DA /* CameraViewController.storyboard */; };
 		45D808DE22BD41D40000BB7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D808DD22BD41D40000BB7D /* AppDelegate.swift */; };
 		45D808E022BD41D40000BB7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D808DF22BD41D40000BB7D /* ViewController.swift */; };
 		45D808E322BD41D40000BB7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D808E122BD41D40000BB7D /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0584C4A422D8875C008FE4DA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		0584C4A622D88799008FE4DA /* CameraViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraViewController.storyboard; sourceTree = "<group>"; };
 		1C664328BACA4D6B4EE0ED3A /* Pods_100DaysSmilingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_100DaysSmilingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2741159C539B0305350A59E1 /* Pods_100DaysSmiling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_100DaysSmiling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		277EF54F0318C4837A9ABA2B /* Pods-100DaysSmilingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-100DaysSmilingTests.debug.xcconfig"; path = "Target Support Files/Pods-100DaysSmilingTests/Pods-100DaysSmilingTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +78,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0584C4A122D886AC008FE4DA /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
 		1E7840FC1AD7F27BC3498EED /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +126,8 @@
 				45D808E422BD41D50000BB7D /* Assets.xcassets */,
 				45D808E622BD41D50000BB7D /* LaunchScreen.storyboard */,
 				45D808E922BD41D50000BB7D /* Info.plist */,
+				0584C4A422D8875C008FE4DA /* CameraViewController.swift */,
+				0584C4A622D88799008FE4DA /* CameraViewController.storyboard */,
 			);
 			path = 100DaysSmiling;
 			sourceTree = "<group>";
@@ -140,6 +153,7 @@
 		8C690E4E22D3311A00FA2ED2 /* Infraestructure */ = {
 			isa = PBXGroup;
 			children = (
+				0584C4A122D886AC008FE4DA /* Camera */,
 				8C690E5F22D4644E00FA2ED2 /* Helper */,
 				8C690E4F22D3312800FA2ED2 /* Authentication */,
 			);
@@ -271,6 +285,7 @@
 			files = (
 				45D808E822BD41D50000BB7D /* LaunchScreen.storyboard in Resources */,
 				45D808E522BD41D50000BB7D /* Assets.xcassets in Resources */,
+				0584C4A722D88799008FE4DA /* CameraViewController.storyboard in Resources */,
 				45D808E322BD41D40000BB7D /* Main.storyboard in Resources */,
 				8C690E5E22D4624B00FA2ED2 /* TwitterCredentials.plist in Resources */,
 			);
@@ -354,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0584C4A522D8875C008FE4DA /* CameraViewController.swift in Sources */,
 				8C690E5C22D4608B00FA2ED2 /* APITwitterService.swift in Sources */,
 				45D808E022BD41D40000BB7D /* ViewController.swift in Sources */,
 				45D808DE22BD41D40000BB7D /* AppDelegate.swift in Sources */,

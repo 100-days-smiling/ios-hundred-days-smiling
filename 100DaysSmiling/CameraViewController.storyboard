@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UoU-kY-iT1">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="xxl-PN-j1r">
+            <objects>
+                <viewController id="UoU-kY-iT1" customClass="CameraViewController" customModule="_00DaysSmiling" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GQj-iO-n97">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZE8-L1-AKm" customClass="SwiftyCamButton" customModule="SwiftyCam">
+                                <rect key="frame" x="143.5" y="429" width="127" height="48"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.7725490196" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                                <state key="normal" title="Take a Picture">
+                                    <color key="titleColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZE8-L1-AKm" firstAttribute="centerY" secondItem="fwh-Om-RjJ" secondAttribute="centerY" id="HvW-EW-dgp"/>
+                            <constraint firstItem="ZE8-L1-AKm" firstAttribute="centerX" secondItem="fwh-Om-RjJ" secondAttribute="centerX" id="XWF-O7-2Jn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fwh-Om-RjJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="ZE8-L1-AKm" id="huJ-bm-5kg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wu-aC-cJM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-103" y="52"/>
+        </scene>
+    </scenes>
+</document>
