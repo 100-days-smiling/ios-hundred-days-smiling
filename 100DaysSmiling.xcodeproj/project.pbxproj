@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0584C4A922D88EB9008FE4DA /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584C4A822D88EB9008FE4DA /* ShareViewController.swift */; };
+		0584C4AB22D88F6F008FE4DA /* ShareViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0584C4AA22D88F6F008FE4DA /* ShareViewController.storyboard */; };
 		45D808DE22BD41D40000BB7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D808DD22BD41D40000BB7D /* AppDelegate.swift */; };
 		45D808E022BD41D40000BB7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D808DF22BD41D40000BB7D /* ViewController.swift */; };
 		45D808E322BD41D40000BB7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D808E122BD41D40000BB7D /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0584C4A822D88EB9008FE4DA /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		0584C4AA22D88F6F008FE4DA /* ShareViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShareViewController.storyboard; sourceTree = "<group>"; };
 		1C664328BACA4D6B4EE0ED3A /* Pods_100DaysSmilingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_100DaysSmilingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2741159C539B0305350A59E1 /* Pods_100DaysSmiling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_100DaysSmiling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		277EF54F0318C4837A9ABA2B /* Pods-100DaysSmilingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-100DaysSmilingTests.debug.xcconfig"; path = "Target Support Files/Pods-100DaysSmilingTests/Pods-100DaysSmilingTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 				45D808E422BD41D50000BB7D /* Assets.xcassets */,
 				45D808E622BD41D50000BB7D /* LaunchScreen.storyboard */,
 				45D808E922BD41D50000BB7D /* Info.plist */,
+				0584C4A822D88EB9008FE4DA /* ShareViewController.swift */,
+				0584C4AA22D88F6F008FE4DA /* ShareViewController.storyboard */,
 			);
 			path = 100DaysSmiling;
 			sourceTree = "<group>";
@@ -299,6 +305,7 @@
 				8C8DDE5622D890FA002F3EE5 /* DashboardViewController.xib in Resources */,
 				45D808E322BD41D40000BB7D /* Main.storyboard in Resources */,
 				8C690E5E22D4624B00FA2ED2 /* TwitterCredentials.plist in Resources */,
+				0584C4AB22D88F6F008FE4DA /* ShareViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0584C4A922D88EB9008FE4DA /* ShareViewController.swift in Sources */,
 				8C690E5C22D4608B00FA2ED2 /* APITwitterService.swift in Sources */,
 				8C8DDE5522D890FA002F3EE5 /* DashboardViewController.swift in Sources */,
 				45D808E022BD41D40000BB7D /* ViewController.swift in Sources */,
