@@ -6,6 +6,7 @@ target '100DaysSmiling' do
   pod 'OAuthSwift', '~> 2.0.0'
   pod 'Swinject'
   pod 'SwiftyCam', '~> 4.0.0'
+  pod 'SwiftyUserDefaults', '~> 4.0.0'
 
   target '100DaysSmilingTests' do
     inherit! :search_paths
