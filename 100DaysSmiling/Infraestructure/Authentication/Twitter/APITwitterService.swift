@@ -8,6 +8,7 @@
 
 import Foundation
 import OAuthSwift
+import SafariServices
 
 class APITwitterService {
     
@@ -20,11 +21,11 @@ class APITwitterService {
         oauthSwift = OAuth1Swift(parameters: parameters)
     }
     
-    func requestAuthotization() {
-        
-        oauthSwift.authorizeURLHandler = OAuthSwiftOpenURLExternally.sharedInstance
+    func requestAuthotization(using oauth: (OAuth1Swift) -> SafariURLHandler) {
+       
+        oauthSwift.authorizeURLHandler = oauth(self.oauthSwift)
         let _ = oauthSwift.authorize(
-        withCallbackURL: URL(string: "hundreddayssmiling")!) { [weak self] result in
+        withCallbackURL: URL(string: "http://www.100dayssmiling.com/oauth/redirect")!) { [weak self] result in
             switch result {
             case .success(let (credential, _, _)):
                 
