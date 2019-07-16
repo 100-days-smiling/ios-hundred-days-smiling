@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import Swinject
 
 class DashboardViewController: UIViewController {
 
+    var router: DashboardRouterProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    @IBAction func takePicture() {
+        router.takePicture()
     }
 }

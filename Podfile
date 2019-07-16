@@ -5,6 +5,7 @@ target '100DaysSmiling' do
   use_frameworks!
   pod 'OAuthSwift', '~> 2.0.0'
   pod 'Swinject', '2.6.2'
+  pod 'SwinjectStoryboard', '2.2.0'
   pod 'SwiftyCam', '~> 4.0.0'
   pod 'Swinject', '2.6.2'
   pod 'SwiftyUserDefaults', '~> 4.0.0'
