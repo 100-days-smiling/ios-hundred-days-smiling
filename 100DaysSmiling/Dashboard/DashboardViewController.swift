@@ -11,11 +11,18 @@ import Swinject
 
 class DashboardViewController: UIViewController {
 
+    // IBOutlet
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var cameraButton: UIButton!
+    
+    // Public cariables
     var router: DashboardRouterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
     
     @IBAction func takePicture() {

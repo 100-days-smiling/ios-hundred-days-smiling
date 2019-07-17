@@ -25,32 +25,32 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Welcome {name}" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFs-pW-zYQ">
-                                                <rect key="frame" x="16" y="16" width="382" height="25.5"/>
+                                                <rect key="frame" x="16" y="16" width="382" height="41"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="750" constant="21" id="dLq-wN-4Nm"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
-                                                <color key="textColor" red="1" green="0.40942770140000001" blue="0.164374825" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d4D-ry-EOb">
-                                                <rect key="frame" x="107" y="51.5" width="200" height="200"/>
+                                                <rect key="frame" x="107" y="67" width="200" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="FfK-e0-0by"/>
                                                     <constraint firstAttribute="width" constant="200" id="aaa-B4-he6"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="You have not started smiling yet, try your first smile today and start sharing your smile." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApG-MM-hzt">
-                                                <rect key="frame" x="16" y="267.5" width="382" height="41"/>
+                                                <rect key="frame" x="16" y="283" width="382" height="46.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="750" constant="21" id="v1g-q3-z2m"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfa-wp-CyU">
-                                                <rect key="frame" x="157" y="324.5" width="100" height="40"/>
+                                                <rect key="frame" x="157" y="345.5" width="100" height="40"/>
                                                 <color key="backgroundColor" red="0.97646335660000005" green="0.97646335660000005" blue="0.97646335660000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="4ek-lr-WTd"/>
@@ -65,7 +65,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.82352941180000006" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.99215686270000003" green="0.80000000000000004" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="vFs-pW-zYQ" firstAttribute="top" secondItem="a3s-LG-TSR" secondAttribute="top" constant="16" id="6Jo-kp-0MN"/>
                                             <constraint firstAttribute="trailing" secondItem="vFs-pW-zYQ" secondAttribute="trailing" constant="16" id="EAi-vI-yIG"/>
@@ -90,7 +90,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.82352941180000006" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.80000000000000004" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="rCv-DA-lCE" firstAttribute="leading" secondItem="3bW-IT-sii" secondAttribute="leading" id="BlV-m1-JWp"/>
                             <constraint firstItem="rCv-DA-lCE" firstAttribute="bottom" secondItem="3bW-IT-sii" secondAttribute="bottom" id="DWL-dA-TW4"/>
@@ -99,6 +99,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3bW-IT-sii"/>
                     </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="yfa-wp-CyU" id="RDd-g6-4uI"/>
+                        <outlet property="descriptionLabel" destination="ApG-MM-hzt" id="Q4s-A9-fl3"/>
+                        <outlet property="imageView" destination="d4D-ry-EOb" id="7FY-av-VZm"/>
+                        <outlet property="titleLabel" destination="vFs-pW-zYQ" id="GgT-Ym-x0m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xyc-AC-JZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

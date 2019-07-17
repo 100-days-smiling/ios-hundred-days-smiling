@@ -9,6 +9,7 @@ target '100DaysSmiling' do
   pod 'SwiftyCam', '~> 4.0.0'
   pod 'Swinject', '2.6.2'
   pod 'SwiftyUserDefaults', '~> 4.0.0'
+  pod 'SwiftJsonThemeManager'
 
   target '100DaysSmilingTests' do
     inherit! :search_paths

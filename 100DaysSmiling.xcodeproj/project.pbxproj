@@ -25,6 +25,9 @@
 		8C8DDE5522D890FA002F3EE5 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8DDE5322D890FA002F3EE5 /* DashboardViewController.swift */; };
 		8CA4724C22D636EA002BCD95 /* AuthenticationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA4724B22D636EA002BCD95 /* AuthenticationContainer.swift */; };
 		8CD5C87722DE345800BA4A11 /* CameraContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD5C87622DE345800BA4A11 /* CameraContainer.swift */; };
+		8CD5C87A22DEEF6D00BA4A11 /* DefaultTheme.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CD5C87922DEEF6D00BA4A11 /* DefaultTheme.json */; };
+		8CD5C87D22DEEFF900BA4A11 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD5C87C22DEEFF900BA4A11 /* UIViewControllerExtension.swift */; };
+		8CD5C87F22DEF20000BA4A11 /* AssociatedIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD5C87E22DEF20000BA4A11 /* AssociatedIdentifiers.swift */; };
 		8CE1BC7422DD9C76001FA9E3 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CE1BC7322DD9C76001FA9E3 /* Dashboard.storyboard */; };
 		8CE1BC7622DD9E70001FA9E3 /* DashboardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE1BC7522DD9E70001FA9E3 /* DashboardContainer.swift */; };
 		8CE1BC7922DD9EA1001FA9E3 /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE1BC7822DD9EA1001FA9E3 /* DashboardRouter.swift */; };
@@ -67,6 +70,9 @@
 		8C8DDE5322D890FA002F3EE5 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		8CA4724B22D636EA002BCD95 /* AuthenticationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationContainer.swift; sourceTree = "<group>"; };
 		8CD5C87622DE345800BA4A11 /* CameraContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraContainer.swift; sourceTree = "<group>"; };
+		8CD5C87922DEEF6D00BA4A11 /* DefaultTheme.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DefaultTheme.json; sourceTree = "<group>"; };
+		8CD5C87C22DEEFF900BA4A11 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		8CD5C87E22DEF20000BA4A11 /* AssociatedIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedIdentifiers.swift; sourceTree = "<group>"; };
 		8CE1BC7322DD9C76001FA9E3 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		8CE1BC7522DD9E70001FA9E3 /* DashboardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardContainer.swift; sourceTree = "<group>"; };
 		8CE1BC7822DD9EA1001FA9E3 /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
@@ -162,6 +168,7 @@
 		8C690E4E22D3311A00FA2ED2 /* Infraestructure */ = {
 			isa = PBXGroup;
 			children = (
+				8CD5C87822DEEF5400BA4A11 /* UI */,
 				8C8DDE6222DC5D30002F3EE5 /* Share */,
 				8C690E5F22D4644E00FA2ED2 /* Helper */,
 				8C690E4F22D3312800FA2ED2 /* Authentication */,
@@ -240,6 +247,24 @@
 				0584C4AA22D88F6F008FE4DA /* ShareViewController.storyboard */,
 			);
 			path = Share;
+			sourceTree = "<group>";
+		};
+		8CD5C87822DEEF5400BA4A11 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8CD5C87B22DEEFE900BA4A11 /* Theme */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8CD5C87B22DEEFE900BA4A11 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				8CD5C87922DEEF6D00BA4A11 /* DefaultTheme.json */,
+				8CD5C87C22DEEFF900BA4A11 /* UIViewControllerExtension.swift */,
+				8CD5C87E22DEF20000BA4A11 /* AssociatedIdentifiers.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		8CE1BC7722DD9E98001FA9E3 /* Router */ = {
@@ -340,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45D808E822BD41D50000BB7D /* LaunchScreen.storyboard in Resources */,
+				8CD5C87A22DEEF6D00BA4A11 /* DefaultTheme.json in Resources */,
 				45D808E522BD41D50000BB7D /* Assets.xcassets in Resources */,
 				0584C4A722D88799008FE4DA /* Camera.storyboard in Resources */,
 				8CE1BC7422DD9C76001FA9E3 /* Dashboard.storyboard in Resources */,
@@ -431,11 +457,13 @@
 				0584C4A522D8875C008FE4DA /* CameraViewController.swift in Sources */,
 				0584C4A922D88EB9008FE4DA /* ShareViewController.swift in Sources */,
 				8CE1BC7622DD9E70001FA9E3 /* DashboardContainer.swift in Sources */,
+				8CD5C87F22DEF20000BA4A11 /* AssociatedIdentifiers.swift in Sources */,
 				8C690E5C22D4608B00FA2ED2 /* APITwitterService.swift in Sources */,
 				8C8DDE5522D890FA002F3EE5 /* DashboardViewController.swift in Sources */,
 				45D808E022BD41D40000BB7D /* ViewController.swift in Sources */,
 				45D808DE22BD41D40000BB7D /* AppDelegate.swift in Sources */,
 				8CA4724C22D636EA002BCD95 /* AuthenticationContainer.swift in Sources */,
+				8CD5C87D22DEEFF900BA4A11 /* UIViewControllerExtension.swift in Sources */,
 				8C690E6122D464B800FA2ED2 /* String+Extension.swift in Sources */,
 				8C8DDE5122D88AB6002F3EE5 /* AppContainer.swift in Sources */,
 				8CE1BC7922DD9EA1001FA9E3 /* DashboardRouter.swift in Sources */,

@@ -1,0 +1,34 @@
+{
+    "definedStyle": {
+        "normalFont": ["bold", "medium"],
+        "normalColor": ["#FFD800", 1],
+        "backgroundColor": ["#EF4423", 1],
+        "defaultBackgroundColor": ["#FDCC78", 1]
+    },
+    "textSizes": {
+        "extraSmall": 16,
+        "small": 20,
+        "medium": 25,
+        "large": 30,
+        "extraLarge": 40
+    },
+    "textStyles": {
+        "normal": "AvenirNextCondensed-Regular",
+        "bold": "AvenirNextCondensed-Bold",
+        "italic": "AvenirNextCondensed-Italic",
+        "boldItalic": "AvenirNextCondensed-BoldItalic"
+    },
+    "imageStyle": {
+        "touchIDImage": "TouchID"
+    },
+    "backgroundViewController": {
+        "defaultView": "defaultBackgroundColor",
+        "themeListViewController": "themeBackgroundColor"
+    },
+    "label": {
+        "commonLabelFont": "normalFont",
+        "commonLabelColor": "normalColor",
+        "customLabelFont": "customFont",
+        "customLabelColor": "customColor"
+    }
+}

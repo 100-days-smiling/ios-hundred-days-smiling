@@ -10,6 +10,7 @@ import UIKit
 import OAuthSwift
 import Swinject
 import SwinjectStoryboard
+import SwiftJsonThemeManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         appContainer = AppContainer(with: AppDelegate.container)
         appContainer.setupContainer()
+        
+        // Initialize the Swift JSON Theme Manager with the default one
+        _ = ThemeManager.currentTheme
+        
         guard let initialViewController = appContainer.container.resolve(DashboardViewController.self) else {
             fatalError("You need to have initial storyboard / view controller ")
         }
