@@ -42,6 +42,11 @@ extension UIViewController {
 
 extension UIViewController: ThemedView {
   
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        applyUIAppearance()
+    }
+    
     public func applyUIAppearance(with theme: Theme? = nil, avoid thisViews: [Any]? = nil) {
   
         ThemeManager.registerForThemeUpdates(self)
@@ -53,7 +58,7 @@ extension UIViewController: ThemedView {
                 self.view.backgroundColor = theme.getThemeColor(name: "backgroundViewController.defaultView")
             case .none: return
         }
-        
+                
         // When you want to have a custom implementation only to that class use this
         if let aSelf = self as? CustomTheme { aSelf.customTheme(theme) }
     }

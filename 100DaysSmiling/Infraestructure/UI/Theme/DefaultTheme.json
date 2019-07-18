@@ -2,6 +2,10 @@
     "definedStyle": {
         "normalFont": ["bold", "medium"],
         "normalColor": ["#FFD800", 1],
+        "titleDashFont": ["bold", "large"],
+        "titleDashColor": ["#FFFFFF", 1],
+        "descriptionDashFont": ["bold", "medium"],
+        "descriptionDashColor": ["#FFFFFF", 1],
         "backgroundColor": ["#EF4423", 1],
         "defaultBackgroundColor": ["#FDCC78", 1]
     },
@@ -26,9 +30,9 @@
         "themeListViewController": "themeBackgroundColor"
     },
     "label": {
-        "commonLabelFont": "normalFont",
-        "commonLabelColor": "normalColor",
-        "customLabelFont": "customFont",
-        "customLabelColor": "customColor"
+        "dashboardTitleFont":"titleDashFont",
+        "dashboardTitleColor":"titleDashColor",
+        "dashboardDescriptionFont":"descriptionDashFont",
+        "dashboardDescriptionColor":"descriptionDashColor"
     }
 }
