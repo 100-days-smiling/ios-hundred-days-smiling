@@ -35,5 +35,6 @@ class AppContainer {
         AuthenticationContainer().setupContainer(with: container)
         DashboardContainer().setupContainer(with: container)
         CameraContainer().setupContainer(with: container)
+        ShareContainer().setupContainer(with: container)
     }
 }

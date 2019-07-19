@@ -9,14 +9,13 @@
 import UIKit
 import SwiftyCam
 
-protocol CameraViewControllerDelegate: class {
-    func viewController(_ viewController: CameraViewController, didTakePicture image: UIImage)
-}
-
 class CameraViewController: SwiftyCamViewController {
-    weak var delegate: CameraViewControllerDelegate?
     
+    // IBOutlet
     @IBOutlet weak var cameraButton: SwiftyCamButton!
+    
+    // Public cariables
+    var router: CameraRouterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +29,6 @@ class CameraViewController: SwiftyCamViewController {
 
 extension CameraViewController: SwiftyCamViewControllerDelegate {
     func swiftyCam(_ swiftyCam: SwiftyCamViewController, didTake photo: UIImage) {
-        delegate?.viewController(self, didTakePicture: photo)
+        router.share(image: photo)
     }
 }

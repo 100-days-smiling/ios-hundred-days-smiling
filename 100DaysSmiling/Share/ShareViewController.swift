@@ -15,6 +15,16 @@ extension DefaultsKeys {
 }
 
 class ShareViewController: UIViewController {
+    var previewImage: UIImage?
+    
+    @IBOutlet weak var previewImageView: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        previewImageView.image = previewImage
+    }
+
     @IBAction func didTapShare(_ sender: Any) {
         presentShareActivity()
     }
@@ -28,8 +38,7 @@ class ShareViewController: UIViewController {
     private func shareData() -> [Any] {
         let day = numberOfDays()
         let text = "Day \(day) of #100dayssmiling"
-        let image: UIImage = UIImage(named: "splash_screen_smile")!
-        return [text, image]
+        return [text, previewImage!]
     }
     
     private func numberOfDays() -> Int {
