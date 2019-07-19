@@ -26,7 +26,7 @@
                                 <color key="backgroundColor" red="0.99581098560000003" green="0.79404163360000002" blue="0.037327889349999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
                                 <state key="normal" title="Share">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapShare:" destination="YrY-B2-0SM" eventType="touchUpInside" id="2iV-uI-l5D"/>

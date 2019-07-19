@@ -7,7 +7,7 @@
         "descriptionDashFont": ["bold", "medium"],
         "descriptionDashColor": ["#FFFFFF", 1],
         "backgroundColor": ["#EF4423", 1],
-        "defaultBackgroundColor": ["#FDCC78", 1]
+        "defaultBackgroundColor": ["#FBC547", 1]
     },
     "textSizes": {
         "extraSmall": 16,

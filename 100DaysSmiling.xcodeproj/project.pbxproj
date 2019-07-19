@@ -185,16 +185,16 @@
 		45D808DC22BD41D40000BB7D /* 100DaysSmiling */ = {
 			isa = PBXGroup;
 			children = (
-				057205CC22E1AE0F00758356 /* Share */,
 				8C690E4E22D3311A00FA2ED2 /* Infraestructure */,
 				8C8DDE6122DC5D0B002F3EE5 /* Camera */,
 				8C8DDE5222D89077002F3EE5 /* Dashboard */,
-				45D808DD22BD41D40000BB7D /* AppDelegate.swift */,
-				45D808DF22BD41D40000BB7D /* ViewController.swift */,
-				45D808E122BD41D40000BB7D /* Main.storyboard */,
+				057205CC22E1AE0F00758356 /* Share */,
 				45D808E422BD41D50000BB7D /* Assets.xcassets */,
 				45D808E622BD41D50000BB7D /* LaunchScreen.storyboard */,
+				45D808E122BD41D40000BB7D /* Main.storyboard */,
 				45D808E922BD41D50000BB7D /* Info.plist */,
+				45D808DD22BD41D40000BB7D /* AppDelegate.swift */,
+				45D808DF22BD41D40000BB7D /* ViewController.swift */,
 			);
 			path = 100DaysSmiling;
 			sourceTree = "<group>";
