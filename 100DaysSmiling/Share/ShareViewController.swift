@@ -17,7 +17,11 @@ extension DefaultsKeys {
 class ShareViewController: UIViewController {
     var previewImage: UIImage?
     
+    // IBOutlet
     @IBOutlet weak var previewImageView: UIImageView!
+    
+    // Public cariables
+    var router: ShareRouterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +36,11 @@ class ShareViewController: UIViewController {
     private func presentShareActivity() {
         let activityViewController = UIActivityViewController(activityItems: shareData(), applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
+        activityViewController.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) -> Void in
+            if completed == true {
+                self.router.complete()
+            }
+        }
         self.present(activityViewController, animated: true, completion: nil)
     }
     

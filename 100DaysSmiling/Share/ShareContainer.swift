@@ -22,6 +22,13 @@ class ShareContainer {
         container.register(ShareViewController.self) { resolver -> ShareViewController in
             let storyboard = resolver.resolve(SwinjectStoryboard.self, name: ShareContainer.ShareKey)
             return (storyboard?.instantiateInitialViewController() as? ShareViewController)!
+        }.initCompleted { resolver, shareView in
+            shareView.router = resolver.resolve(ShareRouterProtocol.self)
+        }
+        
+        container.register(ShareRouterProtocol.self) { resolver -> ShareRouterProtocol in
+            let shareViewController = resolver.resolve(ShareViewController.self)!
+            return ShareRouter(view: shareViewController)
         }
     }
 }

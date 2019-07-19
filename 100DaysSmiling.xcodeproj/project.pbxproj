@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		057205CA22E1AB3D00758356 /* CameraRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057205C922E1AB3D00758356 /* CameraRouter.swift */; };
 		057205CE22E1AE1B00758356 /* ShareContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057205CD22E1AE1B00758356 /* ShareContainer.swift */; };
+		057205D222E1B1EC00758356 /* ShareRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057205D122E1B1EC00758356 /* ShareRouter.swift */; };
 		0584C4A522D8875C008FE4DA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584C4A422D8875C008FE4DA /* CameraViewController.swift */; };
 		0584C4A722D88799008FE4DA /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0584C4A622D88799008FE4DA /* Camera.storyboard */; };
 		0584C4A922D88EB9008FE4DA /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584C4A822D88EB9008FE4DA /* ShareViewController.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		057205C922E1AB3D00758356 /* CameraRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRouter.swift; sourceTree = "<group>"; };
 		057205CD22E1AE1B00758356 /* ShareContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareContainer.swift; sourceTree = "<group>"; };
+		057205D122E1B1EC00758356 /* ShareRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareRouter.swift; sourceTree = "<group>"; };
 		0584C4A422D8875C008FE4DA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		0584C4A622D88799008FE4DA /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		0584C4A822D88EB9008FE4DA /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		057205CC22E1AE0F00758356 /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				057205D022E1B1E000758356 /* Router */,
 				057205CF22E1AE8200758356 /* Views */,
 				0584C4A822D88EB9008FE4DA /* ShareViewController.swift */,
 				057205CD22E1AE1B00758356 /* ShareContainer.swift */,
@@ -138,6 +141,14 @@
 				0584C4AA22D88F6F008FE4DA /* Share.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		057205D022E1B1E000758356 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				057205D122E1B1EC00758356 /* ShareRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		1E7840FC1AD7F27BC3498EED /* Pods */ = {
@@ -490,6 +501,7 @@
 				0584C4A522D8875C008FE4DA /* CameraViewController.swift in Sources */,
 				0584C4A922D88EB9008FE4DA /* ShareViewController.swift in Sources */,
 				8CE1BC7622DD9E70001FA9E3 /* DashboardContainer.swift in Sources */,
+				057205D222E1B1EC00758356 /* ShareRouter.swift in Sources */,
 				8CD5C87F22DEF20000BA4A11 /* AssociatedIdentifiers.swift in Sources */,
 				8C690E5C22D4608B00FA2ED2 /* APITwitterService.swift in Sources */,
 				8C8DDE5522D890FA002F3EE5 /* DashboardViewController.swift in Sources */,
