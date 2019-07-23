@@ -8,6 +8,8 @@
 
 import UIKit
 import Swinject
+import SafariServices
+import OAuthSwift
 
 // MARK: - DashboardViewController
 class DashboardViewController: UIViewController {

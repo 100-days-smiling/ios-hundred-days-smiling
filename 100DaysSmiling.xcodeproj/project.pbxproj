@@ -27,6 +27,7 @@
 		8C690E6122D464B800FA2ED2 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C690E6022D464B800FA2ED2 /* String+Extension.swift */; };
 		8C8DDE5122D88AB6002F3EE5 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8DDE5022D88AB6002F3EE5 /* AppContainer.swift */; };
 		8C8DDE5522D890FA002F3EE5 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8DDE5322D890FA002F3EE5 /* DashboardViewController.swift */; };
+		8C8FF01722E6E1D600C690BC /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8FF01622E6E1D600C690BC /* UIButton+Extension.swift */; };
 		8CA4724C22D636EA002BCD95 /* AuthenticationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA4724B22D636EA002BCD95 /* AuthenticationContainer.swift */; };
 		8CD5C87722DE345800BA4A11 /* CameraContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD5C87622DE345800BA4A11 /* CameraContainer.swift */; };
 		8CD5C87A22DEEF6D00BA4A11 /* DefaultTheme.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CD5C87922DEEF6D00BA4A11 /* DefaultTheme.json */; };
@@ -77,6 +78,7 @@
 		8C690E6022D464B800FA2ED2 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		8C8DDE5022D88AB6002F3EE5 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		8C8DDE5322D890FA002F3EE5 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		8C8FF01622E6E1D600C690BC /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		8CA4724B22D636EA002BCD95 /* AuthenticationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationContainer.swift; sourceTree = "<group>"; };
 		8CD5C87622DE345800BA4A11 /* CameraContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraContainer.swift; sourceTree = "<group>"; };
 		8CD5C87922DEEF6D00BA4A11 /* DefaultTheme.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DefaultTheme.json; sourceTree = "<group>"; };
@@ -295,9 +297,27 @@
 			path = Camera;
 			sourceTree = "<group>";
 		};
+		8C8DDE6222DC5D30002F3EE5 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				0584C4A822D88EB9008FE4DA /* ShareViewController.swift */,
+				0584C4AA22D88F6F008FE4DA /* ShareViewController.storyboard */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		8C8FF01522E6E1C000C690BC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8C8FF01622E6E1D600C690BC /* UIButton+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8CD5C87822DEEF5400BA4A11 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8C8FF01522E6E1C000C690BC /* Extensions */,
 				8CD5C87B22DEEFE900BA4A11 /* Theme */,
 			);
 			path = UI;
@@ -507,6 +527,7 @@
 				8CE1BC7622DD9E70001FA9E3 /* DashboardContainer.swift in Sources */,
 				057205D222E1B1EC00758356 /* ShareRouter.swift in Sources */,
 				8CD5C87F22DEF20000BA4A11 /* AssociatedIdentifiers.swift in Sources */,
+				8C8FF01722E6E1D600C690BC /* UIButton+Extension.swift in Sources */,
 				8C690E5C22D4608B00FA2ED2 /* APITwitterService.swift in Sources */,
 				8C8DDE5522D890FA002F3EE5 /* DashboardViewController.swift in Sources */,
 				057205CA22E1AB3D00758356 /* CameraRouter.swift in Sources */,

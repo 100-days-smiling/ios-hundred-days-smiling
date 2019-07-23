@@ -1,13 +1,15 @@
 {
     "definedStyle": {
-        "normalFont": ["bold", "medium"],
-        "normalColor": ["#FFD800", 1],
-        "titleDashFont": ["bold", "large"],
+        "primaryFont": ["normal", "medium"],
+        "primaryColor": ["#FFFDD5", 1],
+        "secundaryFont": ["normal", "medium"],
+        "secundaryColor": ["#85722E", 1],
+        "titleDashFont": ["normal", "large"],
         "titleDashColor": ["#FFFFFF", 1],
-        "descriptionDashFont": ["bold", "medium"],
+        "descriptionDashFont": ["normal", "medium"],
         "descriptionDashColor": ["#FFFFFF", 1],
         "backgroundColor": ["#EF4423", 1],
-        "defaultBackgroundColor": ["#FBC547", 1]
+        "defaultBackgroundColor": ["#F2D361", 1]
     },
     "textSizes": {
         "extraSmall": 16,
@@ -33,6 +35,8 @@
         "dashboardTitleFont":"titleDashFont",
         "dashboardTitleColor":"titleDashColor",
         "dashboardDescriptionFont":"descriptionDashFont",
-        "dashboardDescriptionColor":"descriptionDashColor"
+        "dashboardDescriptionColor":"descriptionDashColor",
+        "subtitleDashboardFont":"secundaryFont",
+        "subtitleDashboardColor":"secundaryColor"
     }
 }

@@ -12,6 +12,7 @@ import SwiftJsonThemeManager
 public enum LabelViewTheme: String {
     case titleDashboard
     case descriptionDashboard
+    case subtitleDashboard
     case none
 }
 
@@ -64,6 +65,9 @@ extension UILabel: ThemedView {
             case .descriptionDashboard:
                 font = theme.getThemedFont(name: "label.dashboardDescriptionFont")
                 textColor = theme.getThemeColor(name: "label.dashboardDescriptionColor")
+            case .subtitleDashboard:
+                font = theme.getThemedFont(name: "label.subtitleDashboardFont")
+                textColor = theme.getThemeColor(name: "label.subtitleDashboardColor")
             default: break
         }
         
