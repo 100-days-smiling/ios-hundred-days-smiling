@@ -26,16 +26,25 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agC-GM-VSI">
+                                <rect key="frame" x="174.5" y="60" width="65.5" height="41"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fwh-Om-RjJ" firstAttribute="bottom" secondItem="ZE8-L1-AKm" secondAttribute="bottom" constant="20" id="6HU-v8-Bvm"/>
                             <constraint firstItem="ZE8-L1-AKm" firstAttribute="centerX" secondItem="fwh-Om-RjJ" secondAttribute="centerX" id="XWF-O7-2Jn"/>
+                            <constraint firstItem="agC-GM-VSI" firstAttribute="centerX" secondItem="fwh-Om-RjJ" secondAttribute="centerX" id="lK8-Dw-DGB"/>
+                            <constraint firstItem="agC-GM-VSI" firstAttribute="top" secondItem="fwh-Om-RjJ" secondAttribute="top" constant="16" id="uy8-dc-PMn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fwh-Om-RjJ"/>
                     </view>
                     <connections>
                         <outlet property="cameraButton" destination="ZE8-L1-AKm" id="huJ-bm-5kg"/>
+                        <outlet property="dayLabel" destination="agC-GM-VSI" id="7vP-0c-Vs9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wu-aC-cJM" userLabel="First Responder" sceneMemberID="firstResponder"/>

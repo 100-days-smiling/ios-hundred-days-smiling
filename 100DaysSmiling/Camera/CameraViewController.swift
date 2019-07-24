@@ -14,6 +14,7 @@ class CameraViewController: SwiftyCamViewController {
     
     // IBOutlet
     @IBOutlet weak var cameraButton: SwiftyCamButton!
+    @IBOutlet weak var dayLabel: UILabel!
     
     // Public variables
     var router: CameraRouterProtocol!
@@ -23,6 +24,7 @@ class CameraViewController: SwiftyCamViewController {
         super.viewDidLoad()
         
         configureCamera()
+        dayLabel.text = "Day \(Calculator.dayCount)"
     }
 }
 
