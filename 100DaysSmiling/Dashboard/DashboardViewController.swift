@@ -22,10 +22,16 @@ class DashboardViewController: UIViewController {
     
     // Public variables
     var router: DashboardRouterProtocol!
-}
 
-// MARK: - IBActions
-extension DashboardViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+    
+    private func setupUI() {
+        cameraButton.addBorder(color: UIColor.black, width: 2.0, side: .Bottom, .Right)
+    }
+    
     @IBAction func takePicture() {
         router.takePicture()
     }

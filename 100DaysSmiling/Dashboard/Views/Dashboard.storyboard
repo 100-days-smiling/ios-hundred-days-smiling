@@ -37,14 +37,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_screen_smile" translatesAutoresizingMaskIntoConstraints="NO" id="d4D-ry-EOb">
-                                                <rect key="frame" x="107" y="67" width="200" height="200"/>
+                                                <rect key="frame" x="107" y="101.5" width="200" height="200"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="FfK-e0-0by"/>
                                                     <constraint firstAttribute="width" constant="200" id="aaa-B4-he6"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="You have not started smiling yet, try your first smile today and start sharing your smile." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApG-MM-hzt">
-                                                <rect key="frame" x="16" y="283" width="382" height="46.5"/>
+                                                <rect key="frame" x="16" y="317.5" width="382" height="46.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="750" constant="21" id="v1g-q3-z2m"/>
                                                 </constraints>
@@ -56,30 +56,42 @@
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfa-wp-CyU">
-                                                <rect key="frame" x="146.5" y="750" width="121" height="48"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <rect key="frame" x="133.5" y="750" width="147" height="48"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
-                                                <state key="normal" title="Start smiling">
-                                                    <color key="titleColor" red="0.98431372549999996" green="0.7725490196" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Show your smile">
+                                                    <color key="titleColor" red="0.53333333333333333" green="0.53725490196078429" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="takePicture" destination="tjl-I1-bAz" eventType="touchUpInside" id="Rul-qS-9bW"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="let's show your smile today?!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsJ-ZD-j2T">
+                                                <rect key="frame" x="16" y="65" width="382" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="identifierUILabelExtensionName" value="subtitleDashboard"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="vFs-pW-zYQ" firstAttribute="top" secondItem="a3s-LG-TSR" secondAttribute="top" constant="16" id="6Jo-kp-0MN"/>
+                                            <constraint firstItem="lsJ-ZD-j2T" firstAttribute="top" secondItem="vFs-pW-zYQ" secondAttribute="bottom" constant="8" id="7YU-Up-02P"/>
                                             <constraint firstAttribute="trailing" secondItem="vFs-pW-zYQ" secondAttribute="trailing" constant="16" id="EAi-vI-yIG"/>
                                             <constraint firstItem="vFs-pW-zYQ" firstAttribute="leading" secondItem="a3s-LG-TSR" secondAttribute="leading" constant="16" id="PXA-ya-9eg"/>
+                                            <constraint firstItem="lsJ-ZD-j2T" firstAttribute="leading" secondItem="a3s-LG-TSR" secondAttribute="leading" constant="16" id="UKy-Ur-Qg2"/>
                                             <constraint firstItem="ApG-MM-hzt" firstAttribute="top" secondItem="d4D-ry-EOb" secondAttribute="bottom" constant="16" id="Wkp-xW-cx5"/>
+                                            <constraint firstAttribute="trailing" secondItem="lsJ-ZD-j2T" secondAttribute="trailing" constant="16" id="XLh-RO-Su5"/>
+                                            <constraint firstItem="d4D-ry-EOb" firstAttribute="top" secondItem="lsJ-ZD-j2T" secondAttribute="bottom" constant="16" id="Y4p-Xt-Ctm"/>
                                             <constraint firstItem="ApG-MM-hzt" firstAttribute="leading" secondItem="a3s-LG-TSR" secondAttribute="leading" constant="16" id="gz4-Kv-nyv"/>
                                             <constraint firstItem="yfa-wp-CyU" firstAttribute="centerX" secondItem="a3s-LG-TSR" secondAttribute="centerX" id="jG3-Hz-BNR"/>
                                             <constraint firstItem="d4D-ry-EOb" firstAttribute="centerX" secondItem="a3s-LG-TSR" secondAttribute="centerX" id="q87-3p-AaF"/>
                                             <constraint firstAttribute="trailing" secondItem="ApG-MM-hzt" secondAttribute="trailing" constant="16" id="sVo-iX-xKJ"/>
                                             <constraint firstAttribute="bottom" secondItem="yfa-wp-CyU" secondAttribute="bottom" constant="20" id="u2t-52-pxh"/>
-                                            <constraint firstItem="d4D-ry-EOb" firstAttribute="top" secondItem="vFs-pW-zYQ" secondAttribute="bottom" constant="10" id="xp1-bL-MHS"/>
                                         </constraints>
                                     </view>
                                 </subviews>

@@ -297,15 +297,6 @@
 			path = Camera;
 			sourceTree = "<group>";
 		};
-		8C8DDE6222DC5D30002F3EE5 /* Share */ = {
-			isa = PBXGroup;
-			children = (
-				0584C4A822D88EB9008FE4DA /* ShareViewController.swift */,
-				0584C4AA22D88F6F008FE4DA /* ShareViewController.storyboard */,
-			);
-			path = Share;
-			sourceTree = "<group>";
-		};
 		8C8FF01522E6E1C000C690BC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -703,13 +694,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RMWQMGE5WJ;
+				DEVELOPMENT_TEAM = 9RVZM5B68T;
 				INFOPLIST_FILE = 100DaysSmiling/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = co.ahtung.100DaysSmiling;
+				PRODUCT_BUNDLE_IDENTIFIER = felipe.garcia.100DaysSmiling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -722,13 +713,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RMWQMGE5WJ;
+				DEVELOPMENT_TEAM = 9RVZM5B68T;
 				INFOPLIST_FILE = 100DaysSmiling/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = co.ahtung.100DaysSmiling;
+				PRODUCT_BUNDLE_IDENTIFIER = felipe.garcia.100DaysSmiling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
