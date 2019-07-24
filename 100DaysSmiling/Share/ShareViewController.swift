@@ -7,12 +7,6 @@
 //
 
 import UIKit
-import SwiftyUserDefaults
-
-// TODO: (dunyakirkali) Move
-extension DefaultsKeys {
-    static let dates = DefaultsKey<[Date]>("dates", defaultValue: [])
-}
 
 // MARK: - ShareViewController
 class ShareViewController: UIViewController {
@@ -35,7 +29,7 @@ class ShareViewController: UIViewController {
 // MARK: - IBActions
 extension ShareViewController {
     @IBAction func didTapShare(_ sender: Any) {
-        if alreadyShared() {
+        if Calculator.alreadyShared {
             showAlert()
         } else {
             presentShareActivity()
@@ -46,35 +40,17 @@ extension ShareViewController {
 // MARK: - Private Methods
 private extension ShareViewController {
     func presentShareActivity() {
-        let activityViewController = UIActivityViewController(activityItems: shareData(), applicationActivities: nil)
+        var shareData = Calculator.shareData
+        shareData.append(previewImage!)
+        let activityViewController = UIActivityViewController(activityItems: shareData, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         activityViewController.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) -> Void in
             if completed == true {
-                let calendar = Calendar.current
-                let today = calendar.startOfDay(for: Date())
-                Defaults[.dates].append(today)
+                Calculator.record()
                 self.router.complete()
             }
         }
         self.present(activityViewController, animated: true, completion: nil)
-    }
-    
-    func shareData() -> [Any] {
-        let day = dayCount()
-        let text = "Day \(day) of #100dayssmiling"
-        return [text, previewImage!]
-    }
-    
-    func dayCount() -> Int {
-        let dates: [Date] = Defaults[.dates]
-        return dates.count + 1
-    }
-    
-    func alreadyShared() -> Bool {
-        let dates: [Date] = Defaults[.dates]
-        let calendar = Calendar.current
-        let today = calendar.startOfDay(for: Date())
-        return dates.contains(today)
     }
     
     func showAlert() {

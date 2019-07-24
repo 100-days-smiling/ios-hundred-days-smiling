@@ -31,6 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         window?.rootViewController = initialViewController
         
+        // Calculator.reset()
+        
         return true
     }
 

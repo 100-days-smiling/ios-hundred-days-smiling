@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		054DD0A022E8338300714F00 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054DD09F22E8338300714F00 /* Calculator.swift */; };
 		057205CA22E1AB3D00758356 /* CameraRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057205C922E1AB3D00758356 /* CameraRouter.swift */; };
 		057205CE22E1AE1B00758356 /* ShareContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057205CD22E1AE1B00758356 /* ShareContainer.swift */; };
 		057205D222E1B1EC00758356 /* ShareRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057205D122E1B1EC00758356 /* ShareRouter.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		054DD09F22E8338300714F00 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		057205C922E1AB3D00758356 /* CameraRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRouter.swift; sourceTree = "<group>"; };
 		057205CD22E1AE1B00758356 /* ShareContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareContainer.swift; sourceTree = "<group>"; };
 		057205D122E1B1EC00758356 /* ShareRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareRouter.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				8C690E6022D464B800FA2ED2 /* String+Extension.swift */,
+				054DD09F22E8338300714F00 /* Calculator.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 			files = (
 				8CD5C87722DE345800BA4A11 /* CameraContainer.swift in Sources */,
 				0584C4A522D8875C008FE4DA /* CameraViewController.swift in Sources */,
+				054DD0A022E8338300714F00 /* Calculator.swift in Sources */,
 				0584C4A922D88EB9008FE4DA /* ShareViewController.swift in Sources */,
 				8CE1BC7622DD9E70001FA9E3 /* DashboardContainer.swift in Sources */,
 				057205D222E1B1EC00758356 /* ShareRouter.swift in Sources */,
