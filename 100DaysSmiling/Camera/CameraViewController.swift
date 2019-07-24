@@ -18,6 +18,7 @@ class CameraViewController: SwiftyCamViewController {
     // Public variables
     var router: CameraRouterProtocol!
     
+    // View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         

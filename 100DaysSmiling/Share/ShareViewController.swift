@@ -24,6 +24,7 @@ class ShareViewController: UIViewController {
     // Public variables
     var router: ShareRouterProtocol!
     
+    // View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         

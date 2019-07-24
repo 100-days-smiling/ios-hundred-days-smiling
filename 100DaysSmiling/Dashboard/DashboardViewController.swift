@@ -20,8 +20,6 @@ class DashboardViewController: UIViewController {
     
     // Public variables
     var router: DashboardRouterProtocol!
-    
-    
 }
 
 // MARK: - IBActions
