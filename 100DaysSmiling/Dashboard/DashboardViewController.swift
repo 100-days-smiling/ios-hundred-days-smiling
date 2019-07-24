@@ -20,6 +20,12 @@ class DashboardViewController: UIViewController {
     
     // Public variables
     var router: DashboardRouterProtocol!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        descriptionLabel.text = Calculator.dayCount == 0 ? "You have not started smiling yet, try your first smile today and start sharing your smile." : "Day \(Calculator.dayCount)"
+    }
 }
 
 // MARK: - IBActions
