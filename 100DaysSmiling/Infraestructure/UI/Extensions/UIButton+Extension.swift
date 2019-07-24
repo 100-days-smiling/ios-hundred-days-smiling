@@ -15,24 +15,32 @@ public enum UIButtonBorderSide {
 extension UIButton {
     
     public func addBorder(color: UIColor = UIColor.black, width: CGFloat = 1.0, side: UIButtonBorderSide...) {
-        let border = CALayer()
-        border.backgroundColor = color.cgColor
+        
+        // Inner helper function
+        func addNewBorder(color: UIColor, frame: CGRect) {
+            let border = CALayer()
+            border.backgroundColor = color.cgColor
+            border.frame = frame
+            border.name = "border"
+            self.layer.addSublayer(border)
+        }
         
         side.forEach { borderSide in
             switch borderSide {
             case .Top:
-                border.frame = CGRect(x: 0, y: 0, width: frame.size.width, height: width)
+                let frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: width)
+                addNewBorder(color: color, frame: frame)
             case .Bottom:
-                border.frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width, height: width)
+                let frame = CGRect(x: 0, y: self.frame.size.height - width, width: self.frame.size.width, height: width)
+                addNewBorder(color: color, frame: frame)
             case .Left:
-                border.frame = CGRect(x: 0, y: 0, width: width, height: self.frame.size.height)
+                let frame = CGRect(x: 0, y: 0, width: width, height: self.frame.size.height)
+                addNewBorder(color: color, frame: frame)
             case .Right:
-                border.frame = CGRect(x: self.frame.size.width - width, y: 0, width: width, height: self.frame.size.height)
+                let frame = CGRect(x: self.frame.size.width - width, y: 0, width: width, height: self.frame.size.height)
+                addNewBorder(color: color, frame: frame)
             }
         }
-        
-        border.name = "border"
-        self.layer.addSublayer(border)
     }
     
     public func removeBorder(){

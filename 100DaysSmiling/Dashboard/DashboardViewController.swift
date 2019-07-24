@@ -29,7 +29,7 @@ class DashboardViewController: UIViewController {
     }
     
     private func setupUI() {
-        cameraButton.addBorder(color: UIColor.black, width: 2.0, side: .Bottom, .Right)
+        cameraButton.addBorder(color: UIColor.gray, width: 3.0, side: .Bottom, .Right)
     }
     
     @IBAction func takePicture() {
