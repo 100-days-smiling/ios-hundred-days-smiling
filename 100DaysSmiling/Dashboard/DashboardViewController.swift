@@ -9,6 +9,7 @@
 import UIKit
 import Swinject
 
+// MARK: - DashboardViewController
 class DashboardViewController: UIViewController {
 
     // IBOutlet
@@ -17,14 +18,14 @@ class DashboardViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var cameraButton: UIButton!
     
-    // Public cariables
+    // Public variables
     var router: DashboardRouterProtocol!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
     
+}
+
+// MARK: - IBActions
+extension DashboardViewController {
     @IBAction func takePicture() {
         router.takePicture()
     }
