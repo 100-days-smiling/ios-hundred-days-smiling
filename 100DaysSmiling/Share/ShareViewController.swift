@@ -11,7 +11,7 @@ import SwiftyUserDefaults
 
 // TODO: (dunyakirkali) Move
 extension DefaultsKeys {
-    static let startDate = DefaultsKey<Date>("start_date", defaultValue: Date())
+    static let dates = DefaultsKey<[Date]>("dates", defaultValue: [])
 }
 
 class ShareViewController: UIViewController {
@@ -30,7 +30,11 @@ class ShareViewController: UIViewController {
     }
 
     @IBAction func didTapShare(_ sender: Any) {
-        presentShareActivity()
+        if alreadyShared() {
+            showAlert()
+        } else {
+            presentShareActivity()
+        }
     }
     
     private func presentShareActivity() {
@@ -38,6 +42,9 @@ class ShareViewController: UIViewController {
         activityViewController.popoverPresentationController?.sourceView = self.view
         activityViewController.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) -> Void in
             if completed == true {
+                let calendar = Calendar.current
+                let today = calendar.startOfDay(for: Date())
+                Defaults[.dates].append(today)
                 self.router.complete()
             }
         }
@@ -45,19 +52,30 @@ class ShareViewController: UIViewController {
     }
     
     private func shareData() -> [Any] {
-        let day = numberOfDays()
+        let day = dayCount()
         let text = "Day \(day) of #100dayssmiling"
         return [text, previewImage!]
     }
     
-    private func numberOfDays() -> Int {
+    private func dayCount() -> Int {
+        let dates: [Date] = Defaults[.dates]
+        return dates.count + 1
+    }
+    
+    private func alreadyShared() -> Bool {
+        let dates: [Date] = Defaults[.dates]
         let calendar = Calendar.current
+        let today = calendar.startOfDay(for: Date())
+        return dates.contains(today)
+    }
+    
+    private func showAlert() {
+        let alert = UIAlertController(title: "Oups", message: "You already made a photo today", preferredStyle: .alert)
         
-        let date1: Date = Defaults[.startDate]
-        let date2: Date = Date()
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (alert: UIAlertAction!) in
+            self.router.complete()
+        }))
         
-        let components = calendar.dateComponents([.day], from: date1, to: date2)
-        
-        return components.day! + 1
+        self.present(alert, animated: true)
     }
 }
