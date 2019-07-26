@@ -26,6 +26,12 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
+        if Calculator.alreadyStarted {
+            descriptionLabel.text = "Day \(Calculator.dayCount)"
+        } else {
+            descriptionLabel.text = "You have not started smiling yet, try your first smile today and start sharing your smile."
+        }
     }
     
     private func setupUI() {

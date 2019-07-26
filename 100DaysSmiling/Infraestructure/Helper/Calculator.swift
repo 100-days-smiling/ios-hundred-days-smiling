@@ -23,6 +23,10 @@ class Calculator {
         return dates.count + 1
     }
     
+    static var alreadyStarted: Bool {
+        return dayCount > 1
+    }
+    
     static var alreadyShared: Bool {
         let dates: [Date] = Defaults[.dates]
         let calendar = Calendar.current
