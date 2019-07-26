@@ -31,5 +31,7 @@ class CameraContainer {
             let shareViewController = resolver.resolve(ShareViewController.self)!
             return CameraRouter(view: cameraViewController, share: shareViewController)
         }
+        
+        ShareContainer().setupContainer(with: container)
     }
 }

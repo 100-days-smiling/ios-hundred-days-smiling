@@ -32,10 +32,7 @@ class AppContainer {
             dashboardView.router = resolver.resolve(DashboardRouterProtocol.self)
         }
         
-        // TODO: (dunyakirkali) Not all of these should be initialized here
         AuthenticationContainer().setupContainer(with: container)
         DashboardContainer().setupContainer(with: container)
-        CameraContainer().setupContainer(with: container)
-        ShareContainer().setupContainer(with: container)
     }
 }

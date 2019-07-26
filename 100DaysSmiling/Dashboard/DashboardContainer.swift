@@ -18,5 +18,7 @@ class DashboardContainer {
             let cameraViewController = resolver.resolve(CameraViewController.self)!
             return DashboardRouter(view: dashboardViewController, camera: cameraViewController)
         }
+        
+        CameraContainer().setupContainer(with: container)
     }
 }
