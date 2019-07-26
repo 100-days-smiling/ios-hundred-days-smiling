@@ -28,7 +28,8 @@ class ShareContainer {
         
         container.register(ShareRouterProtocol.self) { resolver -> ShareRouterProtocol in
             let shareViewController = resolver.resolve(ShareViewController.self)!
-            return ShareRouter(view: shareViewController)
+            let dashboardViewController = resolver.resolve(DashboardViewController.self)!
+            return ShareRouter(view: shareViewController, dashboard: dashboardViewController)
         }
     }
 }

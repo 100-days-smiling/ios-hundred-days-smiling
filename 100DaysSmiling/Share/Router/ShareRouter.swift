@@ -12,21 +12,28 @@ import UIKit
 protocol ShareRouterProtocol {
     func complete()
     func retry()
+    func cancel()
 }
 
 class ShareRouter: NSObject, ShareRouterProtocol {
     
     private var viewController: ShareViewController
+    private var dashboardViewController: DashboardViewController
     
-    init(view controller: ShareViewController) {
+    init(view controller: ShareViewController, dashboard: DashboardViewController) {
         self.viewController = controller
+        self.dashboardViewController = dashboard
     }
     
     func complete() {
-        self.viewController.dismiss(animated: true, completion: nil)
+        self.dashboardViewController.dismiss(animated: true, completion: nil)
     }
     
     func retry() {
         self.viewController.dismiss(animated: true, completion: nil)
+    }
+    
+    func cancel() {
+        self.dashboardViewController.dismiss(animated: true, completion: nil)
     }
 }

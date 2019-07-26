@@ -39,6 +39,10 @@ extension ShareViewController {
     @IBAction func didTapRetry(_ sender: Any) {
         router.retry()
     }
+    
+    @IBAction func didTapCancel(_ sender: Any) {
+        router.cancel()
+    }
 }
 
 // MARK: - Private Methods
