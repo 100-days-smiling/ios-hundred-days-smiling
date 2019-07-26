@@ -19,8 +19,8 @@ class ShareViewController: UIViewController {
     var router: ShareRouterProtocol!
     
     // View Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         previewImageView.image = previewImage
     }
@@ -34,6 +34,10 @@ extension ShareViewController {
         } else {
             presentShareActivity()
         }
+    }
+    
+    @IBAction func didTapRetry(_ sender: Any) {
+        router.retry()
     }
 }
 

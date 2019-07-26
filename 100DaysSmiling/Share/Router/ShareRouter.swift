@@ -11,6 +11,7 @@ import UIKit
 
 protocol ShareRouterProtocol {
     func complete()
+    func retry()
 }
 
 class ShareRouter: NSObject, ShareRouterProtocol {
@@ -22,6 +23,10 @@ class ShareRouter: NSObject, ShareRouterProtocol {
     }
     
     func complete() {
+        self.viewController.dismiss(animated: true, completion: nil)
+    }
+    
+    func retry() {
         self.viewController.dismiss(animated: true, completion: nil)
     }
 }
