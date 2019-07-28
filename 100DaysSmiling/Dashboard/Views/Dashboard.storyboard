@@ -61,8 +61,11 @@
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                 <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
                                                 <state key="normal" title="Show your smile">
-                                                    <color key="titleColor" red="0.53333333333333333" green="0.53725490196078429" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" red="0.53333333333333333" green="0.53725490196078429" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="identifierUIButtonThemeExtensionName" value="dashboard"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="takePicture" destination="tjl-I1-bAz" eventType="touchUpInside" id="Rul-qS-9bW"/>
                                                 </connections>

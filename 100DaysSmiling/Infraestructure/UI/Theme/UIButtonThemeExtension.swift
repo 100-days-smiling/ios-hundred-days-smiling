@@ -1,0 +1,94 @@
+// Made with Swift Json Theme Manager Template by Felipe Garcia
+//
+//  UIButtonThemeExtension.swift
+//  100DaysSmiling
+//
+//  Created by Felipe Florencio Garcia on 28/07/19.
+//  Copyright © 2019 Felipe Florencio Garcia. All rights reserved.
+//
+
+import SwiftJsonThemeManager
+
+public var customUIButtonThemeExtensionId: UInt8 = 0
+
+public enum UIButtonObjType: String {
+    // Add your types here
+    case dashboard
+    case camera
+    case none
+}
+
+extension UIButton {
+
+// ATENTION to have your custom key, always need to be unique for each extension
+// Tip: Create a file that have all the key's so you have sure neve have duplicated
+    @IBInspectable var identifierUIButtonThemeExtensionName: String {
+        get {
+            return associatedObject(base: self, key: &customUIButtonThemeExtensionId, initialiser: { () -> NSString in
+                return ""
+            }) as String
+        }
+        set {
+            associateObject(base: self, key: &customUIButtonThemeExtensionId, value: newValue as NSString)
+        }
+    }
+
+    public var viewUIButtonObjType: UIButtonObjType {
+        get {
+            return UIButtonObjType(rawValue: identifierUIButtonThemeExtensionName) ?? .none
+        }
+        set {
+            identifierUIButtonThemeExtensionName = newValue.rawValue
+        }
+    }
+}
+
+extension UIButton: ThemedView {
+  
+    open override func awakeFromNib() {
+        super.awakeFromNib()
+        applyUIAppearance()
+    }
+    
+    public func applyUIAppearance(with theme: Theme? = nil, avoid thisViews: [Any]? = nil) {
+  
+        // If is the type UIViewController use this function to register to update
+        // any view controller that you use in your project, can be used to any kind
+        // of view too, but is recomended to use with UIViewController only
+        // ThemeManager.registerForThemeUpdates(self)
+        
+        // Check if I should not try to apply template to this view
+        if let list = thisViews {
+            let isMyType = list.compactMap({ $0 as? UIButton })
+            if isMyType.first(where: { view in return view.isEqual(self) }) != nil {
+                return
+            }
+        }
+        
+        let theme = theme ?? ThemeManager.currentTheme
+        
+        switch viewUIButtonObjType {
+        case .dashboard:
+            backgroundColor = theme.getThemeColor(name: "button.dashboardCameraBackground")
+            let titleColor = theme.getThemeColor(name: "button.dashboardCameraTitleLabel")
+            setTitleColor(titleColor, for: .normal)
+            let shadow = theme.getThemeColor(name: "button.dashboardCameraShadow")
+            addBorder(color: shadow, width: 3.0, side: .Bottom, .Right)
+        case .camera:
+            backgroundColor = theme.getThemeColor(name: "button.cameraBackground")
+            let titleColor = theme.getThemeColor(name: "button.cameraTitleLabel")
+            setTitleColor(titleColor, for: .normal)
+            let shadow = theme.getThemeColor(name: "button.cameraShadow")
+            addBorder(color: shadow, width: 3.0, side: .Bottom, .Right)
+        default: break
+        }
+
+        
+        // When you want to have a custom implementation only to that class use this
+        if let aSelf = self as? CustomTheme { aSelf.customTheme(theme) }
+    }
+    
+    open override func prepareForInterfaceBuilder() {
+        applyUIAppearance()
+    }
+}
