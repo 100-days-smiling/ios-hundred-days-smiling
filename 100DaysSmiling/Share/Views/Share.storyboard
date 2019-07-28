@@ -31,6 +31,9 @@
                                         <state key="normal" title="Share">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="identifierUIButtonThemeExtensionName" value="camera"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didTapShare:" destination="YrY-B2-0SM" eventType="touchUpInside" id="2iV-uI-l5D"/>
                                         </connections>
@@ -42,6 +45,9 @@
                                         <state key="normal" title="Retry">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="identifierUIButtonThemeExtensionName" value="camera"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didTapRetry:" destination="YrY-B2-0SM" eventType="touchUpInside" id="WJw-Wa-M1d"/>
                                         </connections>
@@ -53,6 +59,9 @@
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="identifierUIButtonThemeExtensionName" value="camera"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didTapCancel:" destination="YrY-B2-0SM" eventType="touchUpInside" id="hZ5-Bc-9cH"/>
                                         </connections>

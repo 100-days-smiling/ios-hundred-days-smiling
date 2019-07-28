@@ -15,7 +15,8 @@
         "buttonLabelDashboard": ["#888997", 1],
         "buttonCameraBackgroud": ["#FBC547", 1],
         "buttonCameraShadow": ["#FFFFFF", 1],
-        "buttonCameraLabel": ["#000000", 1]
+        "buttonCameraLabel": ["#000000", 1],
+        "buttonCameraCloseLabel": ["#FBC547", 1]
     },
     "textSizes": {
         "extraSmall": 16,
@@ -51,6 +52,7 @@
         "dashboardCameraTitleLabel": "buttonLabelDashboard",
         "cameraBackground": "buttonCameraBackgroud",
         "cameraShadow": "buttonCameraShadow",
-        "cameraTitleLabel": "buttonCameraLabel"
+        "cameraTitleLabel": "buttonCameraLabel",
+        "cameraCloseButtonLabel": "buttonCameraCloseLabel"
     }
 }

@@ -35,13 +35,30 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJ0-6z-4Zt" userLabel="close bottom">
+                                <rect key="frame" x="358" y="44" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="E8S-dp-q16"/>
+                                    <constraint firstAttribute="width" constant="40" id="jaM-UJ-94n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <state key="normal" title="X"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="identifierUIButtonThemeExtensionName" value="cameraClose"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeCamera" destination="UoU-kY-iT1" eventType="touchUpInside" id="5ne-cM-gTO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fwh-Om-RjJ" firstAttribute="bottom" secondItem="ZE8-L1-AKm" secondAttribute="bottom" constant="20" id="6HU-v8-Bvm"/>
                             <constraint firstItem="ZE8-L1-AKm" firstAttribute="centerX" secondItem="fwh-Om-RjJ" secondAttribute="centerX" id="XWF-O7-2Jn"/>
+                            <constraint firstItem="fwh-Om-RjJ" firstAttribute="trailing" secondItem="fJ0-6z-4Zt" secondAttribute="trailing" constant="16" id="coW-Vt-ZbP"/>
                             <constraint firstItem="agC-GM-VSI" firstAttribute="centerX" secondItem="fwh-Om-RjJ" secondAttribute="centerX" id="lK8-Dw-DGB"/>
                             <constraint firstItem="agC-GM-VSI" firstAttribute="top" secondItem="fwh-Om-RjJ" secondAttribute="top" constant="16" id="uy8-dc-PMn"/>
+                            <constraint firstItem="fJ0-6z-4Zt" firstAttribute="top" secondItem="fwh-Om-RjJ" secondAttribute="top" id="xvQ-vg-xjn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fwh-Om-RjJ"/>
                     </view>

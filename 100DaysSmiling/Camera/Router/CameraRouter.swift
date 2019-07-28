@@ -11,6 +11,7 @@ import UIKit
 
 protocol CameraRouterProtocol {
     func share(image: UIImage)
+    func closeCameraFlow()
 }
 
 class CameraRouter: NSObject, CameraRouterProtocol {
@@ -27,5 +28,9 @@ class CameraRouter: NSObject, CameraRouterProtocol {
         // TODO: (dunyakirkali) Does this belong here?
         shareViewController.previewImage = image
         self.viewController.present(shareViewController, animated: true, completion: nil)
+    }
+    
+    func closeCameraFlow() {
+        self.viewController.dismiss(animated: true, completion: nil)
     }
 }

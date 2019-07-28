@@ -26,6 +26,10 @@ class CameraViewController: SwiftyCamViewController {
         configureCamera()
         dayLabel.text = "Day \(Calculator.dayCount)"
     }
+    
+    @IBAction func closeCamera() {
+        router.closeCameraFlow()
+    }
 }
 
 // MARK: - SwiftyCamViewControllerDelegate

@@ -15,6 +15,7 @@ public enum UIButtonObjType: String {
     // Add your types here
     case dashboard
     case camera
+    case cameraClose
     case none
 }
 
@@ -80,6 +81,9 @@ extension UIButton: ThemedView {
             setTitleColor(titleColor, for: .normal)
             let shadow = theme.getThemeColor(name: "button.cameraShadow")
             addBorder(color: shadow, width: 3.0, side: .Bottom, .Right)
+        case .cameraClose:
+            let titleColor = theme.getThemeColor(name: "button.cameraCloseButtonLabel")
+            setTitleColor(titleColor, for: .normal)
         default: break
         }
 
