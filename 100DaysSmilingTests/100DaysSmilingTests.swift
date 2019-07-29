@@ -1,5 +1,5 @@
 //
-//  _00DaysSmilingTests.swift
+//  100DaysSmilingTests.swift
 //  100DaysSmilingTests
 //
 //  Created by Felipe Florencio Garcia on 21/06/19.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import _00DaysSmiling
 
-class _00DaysSmilingTests: XCTestCase {
+class 100DaysSmilingTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

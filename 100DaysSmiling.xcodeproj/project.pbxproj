@@ -21,7 +21,7 @@
 		45D808E322BD41D40000BB7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D808E122BD41D40000BB7D /* Main.storyboard */; };
 		45D808E522BD41D50000BB7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D808E422BD41D50000BB7D /* Assets.xcassets */; };
 		45D808E822BD41D50000BB7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D808E622BD41D50000BB7D /* LaunchScreen.storyboard */; };
-		45D808F322BD41D50000BB7D /* _00DaysSmilingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D808F222BD41D50000BB7D /* _00DaysSmilingTests.swift */; };
+		45D808F322BD41D50000BB7D /* 100DaysSmilingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D808F222BD41D50000BB7D /* 100DaysSmilingTests.swift */; };
 		4F480EAF7351F6B53A29217B /* Pods_100DaysSmilingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C664328BACA4D6B4EE0ED3A /* Pods_100DaysSmilingTests.framework */; };
 		8C690E5C22D4608B00FA2ED2 /* APITwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C690E5B22D4608B00FA2ED2 /* APITwitterService.swift */; };
 		8C690E5E22D4624B00FA2ED2 /* TwitterCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C690E5D22D4624B00FA2ED2 /* TwitterCredentials.plist */; };
@@ -72,7 +72,7 @@
 		45D808E722BD41D50000BB7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45D808E922BD41D50000BB7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45D808EE22BD41D50000BB7D /* 100DaysSmilingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 100DaysSmilingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		45D808F222BD41D50000BB7D /* _00DaysSmilingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _00DaysSmilingTests.swift; sourceTree = "<group>"; };
+		45D808F222BD41D50000BB7D /* 100DaysSmilingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 100DaysSmilingTests.swift; sourceTree = "<group>"; };
 		45D808F422BD41D50000BB7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EB1989BEEDA2F5B3D22853B /* Pods-100DaysSmilingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-100DaysSmilingTests.release.xcconfig"; path = "Target Support Files/Pods-100DaysSmilingTests/Pods-100DaysSmilingTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C690E5B22D4608B00FA2ED2 /* APITwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITwitterService.swift; sourceTree = "<group>"; };
@@ -208,7 +208,7 @@
 		45D808F122BD41D50000BB7D /* 100DaysSmilingTests */ = {
 			isa = PBXGroup;
 			children = (
-				45D808F222BD41D50000BB7D /* _00DaysSmilingTests.swift */,
+				45D808F222BD41D50000BB7D /* 100DaysSmilingTests.swift */,
 				45D808F422BD41D50000BB7D /* Info.plist */,
 			);
 			path = 100DaysSmilingTests;
@@ -542,7 +542,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45D808F322BD41D50000BB7D /* _00DaysSmilingTests.swift in Sources */,
+				45D808F322BD41D50000BB7D /* 100DaysSmilingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
