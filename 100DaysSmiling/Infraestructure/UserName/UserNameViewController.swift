@@ -19,8 +19,13 @@ class UserNameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        // Do any additional setup after loading the view.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        UIView.animate(withDuration: 0.2) { [weak self] in
+            self?.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        }
     }
     
     @IBAction func done() {
@@ -45,9 +50,19 @@ class UserNameViewController: UIViewController {
                                       message: "You can left empty :( , but would be nice to set, I will try next time than :D ",
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { [weak self] _ in
-            self?.delegate?.finishAddingName(name: nil)
-            self?.dismiss(animated: true, completion: nil)
+            self?.fadeOutAndDismiss()
         }))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    private func fadeOutAndDismiss() {
+        UIView.animate(withDuration: 0.2, animations: { [weak self] in
+            self?.view.backgroundColor = UIColor.black.withAlphaComponent(0.0)
+        }) { [weak self] completed in
+            if completed {
+                self?.delegate?.finishAddingName(name: nil)
+                self?.dismiss(animated: true, completion: nil)
+            }
+        }
     }
 }

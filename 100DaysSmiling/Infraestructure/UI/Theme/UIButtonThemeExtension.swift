@@ -9,13 +9,12 @@
 
 import SwiftJsonThemeManager
 
-public var customUIButtonThemeExtensionId: UInt8 = 0
-
 public enum UIButtonObjType: String {
     // Add your types here
     case dashboard
     case camera
     case cameraClose
+    case popUp
     case none
 }
 
@@ -53,11 +52,6 @@ extension UIButton: ThemedView {
     
     public func applyUIAppearance(with theme: Theme? = nil, avoid thisViews: [Any]? = nil) {
   
-        // If is the type UIViewController use this function to register to update
-        // any view controller that you use in your project, can be used to any kind
-        // of view too, but is recomended to use with UIViewController only
-        // ThemeManager.registerForThemeUpdates(self)
-        
         // Check if I should not try to apply template to this view
         if let list = thisViews {
             let isMyType = list.compactMap({ $0 as? UIButton })
@@ -84,6 +78,12 @@ extension UIButton: ThemedView {
         case .cameraClose:
             let titleColor = theme.getThemeColor(name: "button.cameraCloseButtonLabel")
             setTitleColor(titleColor, for: .normal)
+        case .popUp:
+            backgroundColor = theme.getThemeColor(name: "button.popupButtonBackground")
+            let titleColor = theme.getThemeColor(name: "button.popupButtonTitleLabel")
+            setTitleColor(titleColor, for: .normal)
+            let shadow = theme.getThemeColor(name: "button.popupButtonShadow")
+            addBorder(color: shadow, width: 3.0, side: .Bottom, .Right)
         default: break
         }
 

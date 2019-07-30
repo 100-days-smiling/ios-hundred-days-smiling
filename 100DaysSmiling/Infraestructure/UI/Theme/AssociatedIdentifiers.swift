@@ -10,3 +10,5 @@ import Foundation
 
 public var viewControllerId: UInt8 = 0
 public var labelExtensionId: UInt8 = 1
+public var customUIButtonThemeExtensionId: UInt8 = 2
+public var customUITextFieldExtensionId: UInt8 = 3

@@ -13,6 +13,7 @@ public enum LabelViewTheme: String {
     case titleDashboard
     case descriptionDashboard
     case subtitleDashboard
+    case popUp
     case none
 }
 
@@ -68,6 +69,9 @@ extension UILabel: ThemedView {
             case .subtitleDashboard:
                 font = theme.getThemedFont(name: "label.subtitleDashboardFont")
                 textColor = theme.getThemeColor(name: "label.subtitleDashboardColor")
+            case .popUp:
+                font = theme.getThemedFont(name: "label.subtitleDashboardFont")
+                textColor = theme.getThemeColor(name: "label.popupTitleColor")
             default: break
         }
         

@@ -8,7 +8,6 @@
         "titleDashColor": ["#FFFFFF", 1],
         "descriptionDashFont": ["normal", "medium"],
         "descriptionDashColor": ["#FFFFFF", 1],
-        "backgroundColor": ["#EF4423", 1],
         "defaultBackgroundColor": ["#F2D361", 1],
         "buttonDashboardBackgroud": ["#FFFFFF", 1],
         "buttonDashboardShadow": ["#888997", 1],
@@ -44,7 +43,8 @@
         "dashboardDescriptionFont": "descriptionDashFont",
         "dashboardDescriptionColor": "descriptionDashColor",
         "subtitleDashboardFont": "secundaryFont",
-        "subtitleDashboardColor": "secundaryColor"
+        "subtitleDashboardColor": "secundaryColor",
+        "popupTitleColor": "secundaryColor"
     },
     "button": {
         "dashboardCameraBackground": "buttonDashboardBackgroud",
@@ -53,6 +53,12 @@
         "cameraBackground": "buttonCameraBackgroud",
         "cameraShadow": "buttonCameraShadow",
         "cameraTitleLabel": "buttonCameraLabel",
-        "cameraCloseButtonLabel": "buttonCameraCloseLabel"
+        "cameraCloseButtonLabel": "buttonCameraCloseLabel",
+        "popupButtonBackground": "defaultBackgroundColor",
+        "popupButtonTitleLabel": "buttonDashboardShadow",
+        "popupButtonShadow": "buttonDashboardShadow"
+    },
+    "textField": {
+        "popupBorderColor": "buttonDashboardShadow"
     }
 }
