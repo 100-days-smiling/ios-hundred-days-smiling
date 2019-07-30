@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftJsonThemeManager
 
 protocol UserNameProtocol: class {
     func finishAddingName(name: String?)
@@ -15,14 +16,21 @@ protocol UserNameProtocol: class {
 class UserNameViewController: UIViewController {
 
     @IBOutlet var userNameField: UITextField!
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var constraintSizeToBottomFromTextField: NSLayoutConstraint!
+    
     var delegate: UserNameProtocol?
+    
+    private var keyboardHelper: KeyboardAvoidHelper!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        let size = constraintSizeToBottomFromTextField.constant
+        keyboardHelper = KeyboardAvoidHelper(for: scrollView, plus: size)
         UIView.animate(withDuration: 0.2) { [weak self] in
             self?.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
         }
@@ -74,5 +82,13 @@ class UserNameViewController: UIViewController {
                 self?.dismiss(animated: true, completion: nil)
             }
         }
+    }
+}
+
+extension UserNameViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserNameViewController" customModule="_00DaysSmiling" customModuleProvider="target">
             <connections>
+                <outlet property="constraintSizeToBottomFromTextField" destination="kd9-zJ-Uwq" id="zws-na-ehl"/>
+                <outlet property="scrollView" destination="CIZ-pw-d89" id="4US-ec-CyD"/>
                 <outlet property="userNameField" destination="A8g-cy-tDF" id="R1T-9i-JnW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,76 +25,101 @@
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CIZ-pw-d89">
                     <rect key="frame" x="0.0" y="44" width="414" height="378"/>
-                </scrollView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMJ-Z3-sUM">
-                    <rect key="frame" x="30" y="149.5" width="354" height="157"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Please add your name so we can have a personalized experience for you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZ8-ye-t1a">
-                            <rect key="frame" x="16" y="20" width="322" height="41"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fla-jF-H1g" userLabel="Container View">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="378"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMJ-Z3-sUM">
+                                    <rect key="frame" x="30" y="110.5" width="354" height="157"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" text="Please add your name so we can have a personalized experience for you." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZ8-ye-t1a">
+                                            <rect key="frame" x="16" y="20" width="322" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="21" id="GVq-fx-LdS"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="identifierUILabelExtensionName" value="popUp"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your name" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="A8g-cy-tDF">
+                                            <rect key="frame" x="16" y="69" width="322" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="7ur-mh-xWa"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="identifierUITextFieldExtensionName" value="popUp"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="BRY-xT-mLo"/>
+                                            </connections>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWz-6t-XSv">
+                                            <rect key="frame" x="16" y="107" width="322" height="30"/>
+                                            <color key="backgroundColor" red="1" green="0.82352941180000006" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="900" constant="200" id="QfG-1l-UtT"/>
+                                            </constraints>
+                                            <state key="normal" title="Done">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="identifierUIButtonThemeExtensionName" value="popUpButton"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="done" destination="-1" eventType="touchUpInside" id="X6k-Sf-Wis"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="DWz-6t-XSv" firstAttribute="top" secondItem="A8g-cy-tDF" secondAttribute="bottom" constant="8" id="3Wh-wb-GTr"/>
+                                        <constraint firstAttribute="bottom" secondItem="DWz-6t-XSv" secondAttribute="bottom" constant="20" id="5lP-iG-qNh"/>
+                                        <constraint firstAttribute="trailing" secondItem="VZ8-ye-t1a" secondAttribute="trailing" constant="16" id="CZA-aC-ZGc"/>
+                                        <constraint firstItem="DWz-6t-XSv" firstAttribute="leading" secondItem="vMJ-Z3-sUM" secondAttribute="leading" constant="16" id="CbU-B9-o8N"/>
+                                        <constraint firstItem="A8g-cy-tDF" firstAttribute="top" secondItem="VZ8-ye-t1a" secondAttribute="bottom" constant="8" id="FTQ-BA-K6j"/>
+                                        <constraint firstAttribute="trailing" secondItem="DWz-6t-XSv" secondAttribute="trailing" constant="16" id="aAv-gl-poN"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="100" id="byv-iS-bJt"/>
+                                        <constraint firstItem="VZ8-ye-t1a" firstAttribute="top" secondItem="vMJ-Z3-sUM" secondAttribute="top" constant="20" id="cbv-CN-jsJ"/>
+                                        <constraint firstItem="VZ8-ye-t1a" firstAttribute="leading" secondItem="vMJ-Z3-sUM" secondAttribute="leading" constant="16" id="ckA-hp-IWm"/>
+                                        <constraint firstItem="A8g-cy-tDF" firstAttribute="leading" secondItem="vMJ-Z3-sUM" secondAttribute="leading" constant="16" id="g2x-z7-cXs"/>
+                                        <constraint firstAttribute="bottom" secondItem="A8g-cy-tDF" secondAttribute="bottom" priority="250" constant="58" id="kd9-zJ-Uwq"/>
+                                        <constraint firstAttribute="trailing" secondItem="A8g-cy-tDF" secondAttribute="trailing" constant="16" id="o6B-qY-NZf"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="21" id="GVq-fx-LdS"/>
+                                <constraint firstItem="vMJ-Z3-sUM" firstAttribute="centerX" secondItem="fla-jF-H1g" secondAttribute="centerX" id="KH1-0A-TeY"/>
+                                <constraint firstItem="vMJ-Z3-sUM" firstAttribute="leading" secondItem="fla-jF-H1g" secondAttribute="leading" constant="30" id="QOI-tB-VfQ"/>
+                                <constraint firstItem="vMJ-Z3-sUM" firstAttribute="centerY" secondItem="fla-jF-H1g" secondAttribute="centerY" id="Ryj-di-4p7"/>
+                                <constraint firstAttribute="trailing" secondItem="vMJ-Z3-sUM" secondAttribute="trailing" constant="30" id="eTF-wl-Dk6"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="identifierUILabelExtensionName" value="popUp"/>
-                            </userDefinedRuntimeAttributes>
-                        </label>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="A8g-cy-tDF">
-                            <rect key="frame" x="16" y="69" width="322" height="30"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="30" id="7ur-mh-xWa"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="identifierUITextFieldExtensionName" value="popUp"/>
-                            </userDefinedRuntimeAttributes>
-                        </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWz-6t-XSv">
-                            <rect key="frame" x="16" y="107" width="322" height="30"/>
-                            <color key="backgroundColor" red="1" green="0.82352941180000006" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <state key="normal" title="Done">
-                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="identifierUIButtonThemeExtensionName" value="popUp"/>
-                            </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="done" destination="-1" eventType="touchUpInside" id="X6k-Sf-Wis"/>
-                            </connections>
-                        </button>
+                        </view>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="DWz-6t-XSv" firstAttribute="top" secondItem="A8g-cy-tDF" secondAttribute="bottom" constant="8" id="3Wh-wb-GTr"/>
-                        <constraint firstAttribute="bottom" secondItem="DWz-6t-XSv" secondAttribute="bottom" constant="20" id="5lP-iG-qNh"/>
-                        <constraint firstAttribute="trailing" secondItem="VZ8-ye-t1a" secondAttribute="trailing" constant="16" id="CZA-aC-ZGc"/>
-                        <constraint firstItem="DWz-6t-XSv" firstAttribute="leading" secondItem="vMJ-Z3-sUM" secondAttribute="leading" constant="16" id="CbU-B9-o8N"/>
-                        <constraint firstItem="A8g-cy-tDF" firstAttribute="top" secondItem="VZ8-ye-t1a" secondAttribute="bottom" constant="8" id="FTQ-BA-K6j"/>
-                        <constraint firstAttribute="trailing" secondItem="DWz-6t-XSv" secondAttribute="trailing" constant="16" id="aAv-gl-poN"/>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" constant="100" id="byv-iS-bJt"/>
-                        <constraint firstItem="VZ8-ye-t1a" firstAttribute="top" secondItem="vMJ-Z3-sUM" secondAttribute="top" constant="20" id="cbv-CN-jsJ"/>
-                        <constraint firstItem="VZ8-ye-t1a" firstAttribute="leading" secondItem="vMJ-Z3-sUM" secondAttribute="leading" constant="16" id="ckA-hp-IWm"/>
-                        <constraint firstItem="A8g-cy-tDF" firstAttribute="leading" secondItem="vMJ-Z3-sUM" secondAttribute="leading" constant="16" id="g2x-z7-cXs"/>
-                        <constraint firstAttribute="trailing" secondItem="A8g-cy-tDF" secondAttribute="trailing" constant="16" id="o6B-qY-NZf"/>
+                        <constraint firstItem="fla-jF-H1g" firstAttribute="top" secondItem="CIZ-pw-d89" secondAttribute="top" id="2Eq-Ne-JZe"/>
+                        <constraint firstItem="fla-jF-H1g" firstAttribute="height" secondItem="CIZ-pw-d89" secondAttribute="height" id="JJq-pG-8RD"/>
+                        <constraint firstItem="fla-jF-H1g" firstAttribute="width" secondItem="CIZ-pw-d89" secondAttribute="width" id="NFW-wG-63L"/>
+                        <constraint firstAttribute="trailing" secondItem="fla-jF-H1g" secondAttribute="trailing" id="W9u-BG-H9J"/>
+                        <constraint firstItem="fla-jF-H1g" firstAttribute="leading" secondItem="CIZ-pw-d89" secondAttribute="leading" id="laf-GH-1CU"/>
+                        <constraint firstAttribute="bottom" secondItem="fla-jF-H1g" secondAttribute="bottom" id="tvK-d3-ATL"/>
                     </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="4"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </view>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vMJ-Z3-sUM" secondAttribute="trailing" constant="30" id="77A-bj-mlL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="CIZ-pw-d89" secondAttribute="bottom" id="BvJ-Z2-mHM"/>
-                <constraint firstItem="vMJ-Z3-sUM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CFu-d6-Tuo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CIZ-pw-d89" secondAttribute="trailing" id="OVR-gW-Kue"/>
-                <constraint firstItem="vMJ-Z3-sUM" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="TFQ-0y-dVd"/>
-                <constraint firstItem="vMJ-Z3-sUM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="au3-k3-2PB"/>
                 <constraint firstItem="CIZ-pw-d89" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="efY-Ul-9Pb"/>
                 <constraint firstItem="CIZ-pw-d89" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hPT-oX-kMP"/>
             </constraints>

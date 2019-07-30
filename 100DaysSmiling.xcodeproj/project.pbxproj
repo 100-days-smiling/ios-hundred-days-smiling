@@ -16,6 +16,7 @@
 		0584C4A922D88EB9008FE4DA /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0584C4A822D88EB9008FE4DA /* ShareViewController.swift */; };
 		0584C4AB22D88F6F008FE4DA /* Share.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0584C4AA22D88F6F008FE4DA /* Share.storyboard */; };
 		45139BD322EDE339006FF963 /* UIButtonThemeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45139BD222EDE339006FF963 /* UIButtonThemeExtension.swift */; };
+		454C51D122F0C4420082F9BD /* KeyboardAvoidHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C51D022F0C4420082F9BD /* KeyboardAvoidHelper.swift */; };
 		45D808DE22BD41D40000BB7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D808DD22BD41D40000BB7D /* AppDelegate.swift */; };
 		45D808E022BD41D40000BB7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D808DF22BD41D40000BB7D /* ViewController.swift */; };
 		45D808E322BD41D40000BB7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D808E122BD41D40000BB7D /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		2741159C539B0305350A59E1 /* Pods_100DaysSmiling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_100DaysSmiling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		277EF54F0318C4837A9ABA2B /* Pods-100DaysSmilingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-100DaysSmilingTests.debug.xcconfig"; path = "Target Support Files/Pods-100DaysSmilingTests/Pods-100DaysSmilingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		45139BD222EDE339006FF963 /* UIButtonThemeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonThemeExtension.swift; sourceTree = "<group>"; };
+		454C51D022F0C4420082F9BD /* KeyboardAvoidHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAvoidHelper.swift; sourceTree = "<group>"; };
 		45D808DA22BD41D40000BB7D /* 100DaysSmiling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 100DaysSmiling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45D808DD22BD41D40000BB7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45D808DF22BD41D40000BB7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 			children = (
 				8C690E6022D464B800FA2ED2 /* String+Extension.swift */,
 				054DD09F22E8338300714F00 /* Calculator.swift */,
+				454C51D022F0C4420082F9BD /* KeyboardAvoidHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				45D808DE22BD41D40000BB7D /* AppDelegate.swift in Sources */,
 				8CA4724C22D636EA002BCD95 /* AuthenticationContainer.swift in Sources */,
 				8CD5C87D22DEEFF900BA4A11 /* UIViewControllerExtension.swift in Sources */,
+				454C51D122F0C4420082F9BD /* KeyboardAvoidHelper.swift in Sources */,
 				8C97634122F00D7D0080E032 /* UIView+Extension.swift in Sources */,
 				8C690E6122D464B800FA2ED2 /* String+Extension.swift in Sources */,
 				8C97633E22EF50C50080E032 /* UserNameViewController.swift in Sources */,

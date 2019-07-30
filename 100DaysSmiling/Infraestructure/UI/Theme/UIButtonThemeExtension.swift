@@ -14,7 +14,7 @@ public enum UIButtonObjType: String {
     case dashboard
     case camera
     case cameraClose
-    case popUp
+    case popUpButton
     case none
 }
 
@@ -78,12 +78,10 @@ extension UIButton: ThemedView {
         case .cameraClose:
             let titleColor = theme.getThemeColor(name: "button.cameraCloseButtonLabel")
             setTitleColor(titleColor, for: .normal)
-        case .popUp:
+        case .popUpButton:
             backgroundColor = theme.getThemeColor(name: "button.popupButtonBackground")
             let titleColor = theme.getThemeColor(name: "button.popupButtonTitleLabel")
             setTitleColor(titleColor, for: .normal)
-            let shadow = theme.getThemeColor(name: "button.popupButtonShadow")
-            addBorder(color: shadow, width: 3.0, side: .Bottom, .Right)
         default: break
         }
 
