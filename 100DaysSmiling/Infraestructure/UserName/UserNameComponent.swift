@@ -52,6 +52,7 @@ extension UserNameComponent: UserNameProtocol {
             setUserName(using: userName)
             hasNameCallback?(userName)
         } else {
+            setUserName(using: "")
             hasNameCallback?("Anonymous ;)")
         }
         self.viewController.dismiss(animated: true, completion: nil)

@@ -41,8 +41,18 @@ class UserNameViewController: UIViewController {
         if !(textField.count > 0) {
             showAlertThatIsEmpty()
         } else {
-            delegate?.finishAddingName(name: textField)
+            showAlertNameAdded(for: textField)
         }
+    }
+    
+    private func showAlertNameAdded(for name: String) {
+        let alert = UIAlertController(title: "Thanks",
+                                      message: "Name added, if you want to edit, type twice in the name to add a new one :)",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { [weak self] _ in
+            self?.fadeOutAndDismiss(with: name)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func showAlertThatIsEmpty() {
@@ -55,12 +65,12 @@ class UserNameViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    private func fadeOutAndDismiss() {
+    private func fadeOutAndDismiss(with name: String? = nil) {
         UIView.animate(withDuration: 0.2, animations: { [weak self] in
             self?.view.backgroundColor = UIColor.black.withAlphaComponent(0.0)
         }) { [weak self] completed in
             if completed {
-                self?.delegate?.finishAddingName(name: nil)
+                self?.delegate?.finishAddingName(name: name)
                 self?.dismiss(animated: true, completion: nil)
             }
         }

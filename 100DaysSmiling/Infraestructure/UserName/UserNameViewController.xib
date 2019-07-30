@@ -21,6 +21,9 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="456"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CIZ-pw-d89">
+                    <rect key="frame" x="0.0" y="44" width="414" height="378"/>
+                </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMJ-Z3-sUM">
                     <rect key="frame" x="30" y="149.5" width="354" height="157"/>
                     <subviews>
@@ -85,9 +88,13 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vMJ-Z3-sUM" secondAttribute="trailing" constant="30" id="77A-bj-mlL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="CIZ-pw-d89" secondAttribute="bottom" id="BvJ-Z2-mHM"/>
                 <constraint firstItem="vMJ-Z3-sUM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="CFu-d6-Tuo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CIZ-pw-d89" secondAttribute="trailing" id="OVR-gW-Kue"/>
                 <constraint firstItem="vMJ-Z3-sUM" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="TFQ-0y-dVd"/>
                 <constraint firstItem="vMJ-Z3-sUM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="au3-k3-2PB"/>
+                <constraint firstItem="CIZ-pw-d89" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="efY-Ul-9Pb"/>
+                <constraint firstItem="CIZ-pw-d89" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hPT-oX-kMP"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

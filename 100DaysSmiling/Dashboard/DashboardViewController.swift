@@ -62,9 +62,7 @@ class DashboardViewController: UIViewController {
         if userNameComponent.checkIfUserIsAlreadySet() {
             setUserName(using: userNameComponent.getUserName())
         } else {
-            userNameComponent.showAlert(has: { [weak self] name in
-                self?.setUserName(using: name)
-            })
+            showUserNameAlert()
         }
     }
     
@@ -73,9 +71,19 @@ class DashboardViewController: UIViewController {
         router.takePicture()
     }
     
+    @IBAction func tappedAtUserName(_ sender: UITapGestureRecognizer) {
+        showUserNameAlert()
+    }
+    
     // MARK: Private methods
     private func setUserName(using name: String) {
         self.titleLabel.text = Formating.titleLabel(name: name).string
         self.view.layoutIfNeeded()
+    }
+    
+    private func showUserNameAlert() {
+        userNameComponent.showAlert(has: { [weak self] name in
+            self?.setUserName(using: name)
+        })
     }
 }
