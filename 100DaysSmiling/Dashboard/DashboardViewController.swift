@@ -25,7 +25,7 @@ class DashboardViewController: UIViewController {
                 return String(format: "Welcome %@", name)
             case .descriptionLabel(days: let days):
                 if days > 1 {
-                    return days > 9 ? String(format: "Days %@", days) : String(format: "Day %@", days) //"Day \(Calculator.dayCount)"
+                    return days > 9 ? String(format: "Days %d", days) : String(format: "Day %d", days) //"Day \(Calculator.dayCount)"
                 } else {
                     return "You have not started smiling yet, try your first smile today and start sharing your smile."
                 }
