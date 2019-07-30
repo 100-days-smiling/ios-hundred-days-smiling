@@ -26,9 +26,13 @@
 		8C690E5C22D4608B00FA2ED2 /* APITwitterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C690E5B22D4608B00FA2ED2 /* APITwitterService.swift */; };
 		8C690E5E22D4624B00FA2ED2 /* TwitterCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C690E5D22D4624B00FA2ED2 /* TwitterCredentials.plist */; };
 		8C690E6122D464B800FA2ED2 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C690E6022D464B800FA2ED2 /* String+Extension.swift */; };
+		8C73622D22EEBA0E0084E5FB /* UserNameComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C73622C22EEBA0E0084E5FB /* UserNameComponent.swift */; };
 		8C8DDE5122D88AB6002F3EE5 /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8DDE5022D88AB6002F3EE5 /* AppContainer.swift */; };
 		8C8DDE5522D890FA002F3EE5 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8DDE5322D890FA002F3EE5 /* DashboardViewController.swift */; };
 		8C8FF01722E6E1D600C690BC /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8FF01622E6E1D600C690BC /* UIButton+Extension.swift */; };
+		8C97633E22EF50C50080E032 /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C97633C22EF50C50080E032 /* UserNameViewController.swift */; };
+		8C97633F22EF50C50080E032 /* UserNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C97633D22EF50C50080E032 /* UserNameViewController.xib */; };
+		8C97634122F00D7D0080E032 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C97634022F00D7D0080E032 /* UIView+Extension.swift */; };
 		8CA4724C22D636EA002BCD95 /* AuthenticationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA4724B22D636EA002BCD95 /* AuthenticationContainer.swift */; };
 		8CD5C87722DE345800BA4A11 /* CameraContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD5C87622DE345800BA4A11 /* CameraContainer.swift */; };
 		8CD5C87A22DEEF6D00BA4A11 /* DefaultTheme.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CD5C87922DEEF6D00BA4A11 /* DefaultTheme.json */; };
@@ -78,9 +82,13 @@
 		8C690E5B22D4608B00FA2ED2 /* APITwitterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITwitterService.swift; sourceTree = "<group>"; };
 		8C690E5D22D4624B00FA2ED2 /* TwitterCredentials.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = TwitterCredentials.plist; sourceTree = "<group>"; };
 		8C690E6022D464B800FA2ED2 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		8C73622C22EEBA0E0084E5FB /* UserNameComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameComponent.swift; sourceTree = "<group>"; };
 		8C8DDE5022D88AB6002F3EE5 /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		8C8DDE5322D890FA002F3EE5 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		8C8FF01622E6E1D600C690BC /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		8C97633C22EF50C50080E032 /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
+		8C97633D22EF50C50080E032 /* UserNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserNameViewController.xib; sourceTree = "<group>"; };
+		8C97634022F00D7D0080E032 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		8CA4724B22D636EA002BCD95 /* AuthenticationContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationContainer.swift; sourceTree = "<group>"; };
 		8CD5C87622DE345800BA4A11 /* CameraContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraContainer.swift; sourceTree = "<group>"; };
 		8CD5C87922DEEF6D00BA4A11 /* DefaultTheme.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DefaultTheme.json; sourceTree = "<group>"; };
@@ -226,6 +234,7 @@
 		8C690E4E22D3311A00FA2ED2 /* Infraestructure */ = {
 			isa = PBXGroup;
 			children = (
+				8C73622B22EEB9F60084E5FB /* UserName */,
 				8CD5C87822DEEF5400BA4A11 /* UI */,
 				8C690E5F22D4644E00FA2ED2 /* Helper */,
 				8C690E4F22D3312800FA2ED2 /* Authentication */,
@@ -269,6 +278,16 @@
 			path = Credentials;
 			sourceTree = "<group>";
 		};
+		8C73622B22EEB9F60084E5FB /* UserName */ = {
+			isa = PBXGroup;
+			children = (
+				8C73622C22EEBA0E0084E5FB /* UserNameComponent.swift */,
+				8C97633C22EF50C50080E032 /* UserNameViewController.swift */,
+				8C97633D22EF50C50080E032 /* UserNameViewController.xib */,
+			);
+			path = UserName;
+			sourceTree = "<group>";
+		};
 		8C8DDE5222D89077002F3EE5 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				8C8FF01622E6E1D600C690BC /* UIButton+Extension.swift */,
+				8C97634022F00D7D0080E032 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -432,6 +452,7 @@
 				8CE1BC7422DD9C76001FA9E3 /* Dashboard.storyboard in Resources */,
 				45D808E322BD41D40000BB7D /* Main.storyboard in Resources */,
 				8C690E5E22D4624B00FA2ED2 /* TwitterCredentials.plist in Resources */,
+				8C97633F22EF50C50080E032 /* UserNameViewController.xib in Resources */,
 				0584C4AB22D88F6F008FE4DA /* Share.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,6 +544,7 @@
 				8CD5C87F22DEF20000BA4A11 /* AssociatedIdentifiers.swift in Sources */,
 				8C8FF01722E6E1D600C690BC /* UIButton+Extension.swift in Sources */,
 				8C690E5C22D4608B00FA2ED2 /* APITwitterService.swift in Sources */,
+				8C73622D22EEBA0E0084E5FB /* UserNameComponent.swift in Sources */,
 				8C8DDE5522D890FA002F3EE5 /* DashboardViewController.swift in Sources */,
 				057205CA22E1AB3D00758356 /* CameraRouter.swift in Sources */,
 				057205CE22E1AE1B00758356 /* ShareContainer.swift in Sources */,
@@ -531,7 +553,9 @@
 				45D808DE22BD41D40000BB7D /* AppDelegate.swift in Sources */,
 				8CA4724C22D636EA002BCD95 /* AuthenticationContainer.swift in Sources */,
 				8CD5C87D22DEEFF900BA4A11 /* UIViewControllerExtension.swift in Sources */,
+				8C97634122F00D7D0080E032 /* UIView+Extension.swift in Sources */,
 				8C690E6122D464B800FA2ED2 /* String+Extension.swift in Sources */,
+				8C97633E22EF50C50080E032 /* UserNameViewController.swift in Sources */,
 				8C8DDE5122D88AB6002F3EE5 /* AppContainer.swift in Sources */,
 				45139BD322EDE339006FF963 /* UIButtonThemeExtension.swift in Sources */,
 				8CE1BC7922DD9EA1001FA9E3 /* DashboardRouter.swift in Sources */,

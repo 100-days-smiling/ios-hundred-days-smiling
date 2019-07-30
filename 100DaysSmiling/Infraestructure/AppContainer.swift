@@ -30,6 +30,7 @@ class AppContainer {
             return (storyboard?.instantiateInitialViewController() as? DashboardViewController)!
         }.initCompleted { resolver, dashboardView in
             dashboardView.router = resolver.resolve(DashboardRouterProtocol.self)
+            dashboardView.userNameComponent = UserNameComponent(view: dashboardView)
         }
         
         AuthenticationContainer().setupContainer(with: container)
