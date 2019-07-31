@@ -18,7 +18,6 @@
 		45139BD322EDE339006FF963 /* UIButtonThemeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45139BD222EDE339006FF963 /* UIButtonThemeExtension.swift */; };
 		454C51D122F0C4420082F9BD /* KeyboardAvoidHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C51D022F0C4420082F9BD /* KeyboardAvoidHelper.swift */; };
 		45D808DE22BD41D40000BB7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D808DD22BD41D40000BB7D /* AppDelegate.swift */; };
-		45D808E022BD41D40000BB7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D808DF22BD41D40000BB7D /* ViewController.swift */; };
 		45D808E322BD41D40000BB7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D808E122BD41D40000BB7D /* Main.storyboard */; };
 		45D808E522BD41D50000BB7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45D808E422BD41D50000BB7D /* Assets.xcassets */; };
 		45D808E822BD41D50000BB7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D808E622BD41D50000BB7D /* LaunchScreen.storyboard */; };
@@ -556,7 +555,6 @@
 				057205CA22E1AB3D00758356 /* CameraRouter.swift in Sources */,
 				057205CE22E1AE1B00758356 /* ShareContainer.swift in Sources */,
 				8CDB560522E03D1900705FBB /* UILabelExtension.swift in Sources */,
-				45D808E022BD41D40000BB7D /* ViewController.swift in Sources */,
 				45D808DE22BD41D40000BB7D /* AppDelegate.swift in Sources */,
 				8CA4724C22D636EA002BCD95 /* AuthenticationContainer.swift in Sources */,
 				8CD5C87D22DEEFF900BA4A11 /* UIViewControllerExtension.swift in Sources */,

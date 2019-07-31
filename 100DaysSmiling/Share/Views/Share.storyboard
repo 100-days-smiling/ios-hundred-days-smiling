@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0ow-LL-6rV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0ow-LL-6rV">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rrQ-Je-M7d">
@@ -32,7 +32,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="identifierUIButtonThemeExtensionName" value="camera"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="identifierUIButtonThemeExtensionName" value="shareButton"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didTapShare:" destination="YrY-B2-0SM" eventType="touchUpInside" id="2iV-uI-l5D"/>
@@ -46,7 +46,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="identifierUIButtonThemeExtensionName" value="camera"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="identifierUIButtonThemeExtensionName" value="shareButton"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didTapRetry:" destination="YrY-B2-0SM" eventType="touchUpInside" id="WJw-Wa-M1d"/>
@@ -60,7 +60,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="identifierUIButtonThemeExtensionName" value="camera"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="identifierUIButtonThemeExtensionName" value="shareButton"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="didTapCancel:" destination="YrY-B2-0SM" eventType="touchUpInside" id="hZ5-Bc-9cH"/>

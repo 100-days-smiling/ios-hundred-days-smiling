@@ -15,6 +15,7 @@ public enum UIButtonObjType: String {
     case camera
     case cameraClose
     case popUpButton
+    case shareButton
     case none
 }
 
@@ -74,7 +75,7 @@ extension UIButton: ThemedView {
             let titleColor = theme.getThemeColor(name: "button.cameraTitleLabel")
             setTitleColor(titleColor, for: .normal)
             let shadow = theme.getThemeColor(name: "button.cameraShadow")
-            addBorder(color: shadow, width: 3.0, side: .Bottom, .Right)
+            addBorder(color: shadow, width: 3.0, side: .Top, .Bottom, .Right, .Left)
         case .cameraClose:
             let titleColor = theme.getThemeColor(name: "button.cameraCloseButtonLabel")
             setTitleColor(titleColor, for: .normal)
@@ -82,6 +83,12 @@ extension UIButton: ThemedView {
             backgroundColor = theme.getThemeColor(name: "button.popupButtonBackground")
             let titleColor = theme.getThemeColor(name: "button.popupButtonTitleLabel")
             setTitleColor(titleColor, for: .normal)
+        case .shareButton:
+            backgroundColor = theme.getThemeColor(name: "button.shareButtonBackground")
+            let titleColor = theme.getThemeColor(name: "button.shareButtonTitleLabel")
+            setTitleColor(titleColor, for: .normal)
+            let shadow = theme.getThemeColor(name: "button.shareButtonShadow")
+            addBorder(color: shadow, width: 3.0, side: .Top, .Bottom, .Right, .Left)
         default: break
         }
 

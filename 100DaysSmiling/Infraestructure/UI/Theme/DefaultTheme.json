@@ -12,9 +12,9 @@
         "buttonDashboardBackgroud": ["#FFFFFF", 1],
         "buttonDashboardShadow": ["#888997", 1],
         "buttonLabelDashboard": ["#888997", 1],
-        "buttonCameraBackgroud": ["#FBC547", 1],
+        "buttonCameraBackgroud": ["#F2D361", 1],
         "buttonCameraShadow": ["#FFFFFF", 1],
-        "buttonCameraLabel": ["#000000", 1],
+        "buttonCameraLabel": ["#888997", 1],
         "buttonCameraCloseLabel": ["#FBC547", 1]
     },
     "textSizes": {
@@ -56,7 +56,10 @@
         "cameraCloseButtonLabel": "buttonCameraCloseLabel",
         "popupButtonBackground": "defaultBackgroundColor",
         "popupButtonTitleLabel": "buttonDashboardShadow",
-        "popupButtonShadow": "buttonDashboardShadow"
+        "popupButtonShadow": "buttonDashboardShadow",
+        "shareButtonBackground": "buttonCameraBackgroud",
+        "shareButtonShadow": "buttonCameraShadow",
+        "shareButtonTitleLabel": "buttonCameraLabel"
     },
     "textField": {
         "popupBorderColor": "buttonDashboardShadow"
