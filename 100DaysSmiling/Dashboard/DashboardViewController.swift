@@ -16,11 +16,17 @@ class DashboardViewController: UIViewController {
 
     // MARK: String formating
     enum Formating {
+        case cameraButtonLabel
         case titleLabel(name: String)
         case descriptionLabel(days: Int)
         
         var string: String {
             switch self {
+            case .cameraButtonLabel:
+                if ChallengeComponent().challengeComplete() {
+                    return "Restart"
+                }
+                return "Show your smile"
             case .titleLabel(name: let name):
                 return String(format: "Welcome %@", name)
             case .descriptionLabel(days: let days):
@@ -42,9 +48,15 @@ class DashboardViewController: UIViewController {
     // Public variables
     var router: DashboardRouterProtocol!
     var userNameComponent: UserNameComponent!
+    var challengeComponent = ChallengeComponent()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(updatedDate), name: ShareRouter.shareNotificationKey, object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setupUI()
     }
     
@@ -56,6 +68,7 @@ class DashboardViewController: UIViewController {
     // MARK: UI Setup
     func setupUI() {
         descriptionLabel.text = Formating.descriptionLabel(days: Calculator.dayCount).string
+        cameraButton.titleLabel?.text = Formating.cameraButtonLabel.string
     }
     
     func setupUserNamer() {
@@ -85,5 +98,10 @@ class DashboardViewController: UIViewController {
         userNameComponent.showAlert(has: { [weak self] name in
             self?.setUserName(using: name)
         })
+    }
+    
+    @objc
+    private func updatedDate() {
+        setupUI()
     }
 }

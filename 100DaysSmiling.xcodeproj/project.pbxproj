@@ -43,6 +43,7 @@
 		8CE1BC7422DD9C76001FA9E3 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CE1BC7322DD9C76001FA9E3 /* Dashboard.storyboard */; };
 		8CE1BC7622DD9E70001FA9E3 /* DashboardContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE1BC7522DD9E70001FA9E3 /* DashboardContainer.swift */; };
 		8CE1BC7922DD9EA1001FA9E3 /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE1BC7822DD9EA1001FA9E3 /* DashboardRouter.swift */; };
+		8CFF7D6822F4573E00EA9CDB /* ChallengeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFF7D6722F4573E00EA9CDB /* ChallengeComponent.swift */; };
 		A9676ED46ECEF4DE9821E133 /* Pods_100DaysSmiling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2741159C539B0305350A59E1 /* Pods_100DaysSmiling.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		8CE1BC7322DD9C76001FA9E3 /* Dashboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Dashboard.storyboard; sourceTree = "<group>"; };
 		8CE1BC7522DD9E70001FA9E3 /* DashboardContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardContainer.swift; sourceTree = "<group>"; };
 		8CE1BC7822DD9EA1001FA9E3 /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
+		8CFF7D6722F4573E00EA9CDB /* ChallengeComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeComponent.swift; sourceTree = "<group>"; };
 		95A99624D0BACD8BB3D77AE0 /* Pods-100DaysSmiling.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-100DaysSmiling.debug.xcconfig"; path = "Target Support Files/Pods-100DaysSmiling/Pods-100DaysSmiling.debug.xcconfig"; sourceTree = "<group>"; };
 		9A8AD99B84D5C16BBEE723ED /* Pods-100DaysSmiling.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-100DaysSmiling.release.xcconfig"; path = "Target Support Files/Pods-100DaysSmiling/Pods-100DaysSmiling.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -237,6 +239,7 @@
 		8C690E4E22D3311A00FA2ED2 /* Infraestructure */ = {
 			isa = PBXGroup;
 			children = (
+				8CFF7D6622F4571C00EA9CDB /* ChallengeComponent */,
 				8C73622B22EEB9F60084E5FB /* UserName */,
 				8CD5C87822DEEF5400BA4A11 /* UI */,
 				8C690E5F22D4644E00FA2ED2 /* Helper */,
@@ -359,6 +362,14 @@
 				8CE1BC7822DD9EA1001FA9E3 /* DashboardRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		8CFF7D6622F4571C00EA9CDB /* ChallengeComponent */ = {
+			isa = PBXGroup;
+			children = (
+				8CFF7D6722F4573E00EA9CDB /* ChallengeComponent.swift */,
+			);
+			path = ChallengeComponent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -556,6 +567,7 @@
 				057205CE22E1AE1B00758356 /* ShareContainer.swift in Sources */,
 				8CDB560522E03D1900705FBB /* UILabelExtension.swift in Sources */,
 				45D808DE22BD41D40000BB7D /* AppDelegate.swift in Sources */,
+				8CFF7D6822F4573E00EA9CDB /* ChallengeComponent.swift in Sources */,
 				8CA4724C22D636EA002BCD95 /* AuthenticationContainer.swift in Sources */,
 				8CD5C87D22DEEFF900BA4A11 /* UIViewControllerExtension.swift in Sources */,
 				454C51D122F0C4420082F9BD /* KeyboardAvoidHelper.swift in Sources */,

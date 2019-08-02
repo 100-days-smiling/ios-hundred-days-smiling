@@ -16,6 +16,8 @@ protocol ShareRouterProtocol {
 }
 
 class ShareRouter: NSObject, ShareRouterProtocol {
+
+    static let shareNotificationKey = NSNotification.Name(rawValue: "shared")
     
     private var viewController: ShareViewController
     private var dashboardViewController: DashboardViewController
@@ -26,6 +28,7 @@ class ShareRouter: NSObject, ShareRouterProtocol {
     }
     
     func complete() {
+        NotificationCenter.default.post(name: ShareRouter.shareNotificationKey, object: nil)
         self.dashboardViewController.dismiss(animated: true, completion: nil)
     }
     
