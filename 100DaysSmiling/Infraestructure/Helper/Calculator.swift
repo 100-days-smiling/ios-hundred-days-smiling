@@ -26,7 +26,8 @@ class Calculator {
             return 100
         }
         
-        return totalOfDays // (97 + dates.count) + 1
+        return totalOfDays
+//        return (97 + dates.count) + 1
     }
     
     static var alreadyStarted: Bool {
@@ -34,6 +35,7 @@ class Calculator {
     }
     
     static var alreadyShared: Bool {
+//        return false
         let dates: [Date] = Defaults[.dates]
         let calendar = Calendar.current
         let today = calendar.startOfDay(for: Date())
