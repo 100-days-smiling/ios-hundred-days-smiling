@@ -20,7 +20,13 @@ class Calculator {
     
     static var dayCount: Int {
         let dates: [Date] = Defaults[.dates]
-        return dates.count + 1
+        let totalOfDays = dates.count + 1
+        
+        if totalOfDays > 100 {
+            return 100
+        }
+        
+        return totalOfDays // (97 + dates.count) + 1
     }
     
     static var alreadyStarted: Bool {

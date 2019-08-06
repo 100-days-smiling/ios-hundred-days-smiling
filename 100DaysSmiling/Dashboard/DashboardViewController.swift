@@ -10,6 +10,7 @@ import UIKit
 import Swinject
 import SafariServices
 import OAuthSwift
+import SwiftJsonThemeManager
 
 // MARK: - DashboardViewController
 class DashboardViewController: UIViewController {
@@ -68,7 +69,10 @@ class DashboardViewController: UIViewController {
     // MARK: UI Setup
     func setupUI() {
         descriptionLabel.text = Formating.descriptionLabel(days: Calculator.dayCount).string
-        cameraButton.titleLabel?.text = Formating.cameraButtonLabel.string
+        cameraButton.setTitle(Formating.cameraButtonLabel.string, for: .normal)
+        cameraButton.setNeedsLayout()
+        cameraButton.layoutIfNeeded()
+        cameraButton.applyUIAppearance()
     }
     
     func setupUserNamer() {
@@ -81,7 +85,7 @@ class DashboardViewController: UIViewController {
     
     // MARK: IBAction
     @IBAction func takePicture() {
-        router.takePicture()
+        routeToCamera()
     }
     
     @IBAction func tappedAtUserName(_ sender: UITapGestureRecognizer) {
@@ -89,6 +93,24 @@ class DashboardViewController: UIViewController {
     }
     
     // MARK: Private methods
+    private func routeToCamera() {
+        let challengeComponent = ChallengeComponent()
+        
+        let routeToPicture = { [unowned self] in
+            self.router.takePicture()
+        }
+        
+        if !challengeComponent.challengeComplete() {
+            routeToPicture()
+        } else {
+            let alertPresent = challengeComponent.completedChallenge(reset: {
+                routeToPicture()
+            }, continue: nil)
+            
+            self.present(alertPresent, animated: true, completion: nil)
+        }
+    }
+    
     private func setUserName(using name: String) {
         self.titleLabel.text = Formating.titleLabel(name: name).string
         self.view.layoutIfNeeded()

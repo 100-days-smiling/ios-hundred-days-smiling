@@ -59,7 +59,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="identifierUILabelExtensionName" value="descriptionDashboard"/>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfa-wp-CyU">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfa-wp-CyU">
                                                 <rect key="frame" x="133.5" y="750" width="147" height="48"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>

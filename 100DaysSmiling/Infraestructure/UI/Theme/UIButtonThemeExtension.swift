@@ -68,6 +68,7 @@ extension UIButton: ThemedView {
             backgroundColor = theme.getThemeColor(name: "button.dashboardCameraBackground")
             let titleColor = theme.getThemeColor(name: "button.dashboardCameraTitleLabel")
             setTitleColor(titleColor, for: .normal)
+            removeBorder()
             let shadow = theme.getThemeColor(name: "button.dashboardCameraShadow")
             addBorder(color: shadow, width: 3.0, side: .Bottom, .Right)
         case .camera:
