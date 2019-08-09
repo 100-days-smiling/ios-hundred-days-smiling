@@ -42,5 +42,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         return true
     }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        if ChallengeComponent().challengeComplete() && UIApplication.shared.alternateIconName != "hundred" {
+            UIApplication.shared.setAlternateIconName("hundred")
+        } else {
+            // This is used for test purpouse only, activate and see the icon change in and back
+//            UIApplication.shared.setAlternateIconName(nil)
+        }
+    }
 }
 
