@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol ShareViewControllerProtocol {
+    func presentShareActivity(using network: ShareComponentProtocol)
+}
+
 // MARK: - ShareViewController
 class ShareViewController: UIViewController {
     var previewImage: UIImage?
@@ -17,6 +21,7 @@ class ShareViewController: UIViewController {
     
     // Public variables
     var router: ShareRouterProtocol!
+    var sharePopup: SharePopUpComponentViewController!
     
     // View Lifecycle
     override func viewWillAppear(_ animated: Bool) {
@@ -32,7 +37,10 @@ extension ShareViewController {
         if Calculator.alreadyShared {
             showAlert()
         } else {
-            presentShareActivity()
+            // Show popup
+            sharePopup.modalPresentationStyle = .overCurrentContext
+            self.present(sharePopup, animated: true, completion: nil)
+//            presentShareActivity()
         }
     }
     
@@ -46,8 +54,8 @@ extension ShareViewController {
 }
 
 // MARK: - Private Methods
-private extension ShareViewController {
-    func presentShareActivity() {
+extension ShareViewController: ShareViewControllerProtocol {
+    func presentShareActivity(using network: ShareComponentProtocol) {
         var shareData = Calculator.shareData
         shareData.append(previewImage!)
         let activityViewController = UIActivityViewController(activityItems: shareData, applicationActivities: nil)

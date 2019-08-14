@@ -24,6 +24,14 @@ class ShareContainer {
             return (storyboard?.instantiateInitialViewController() as? ShareViewController)!
         }.initCompleted { resolver, shareView in
             shareView.router = resolver.resolve(ShareRouterProtocol.self)
+            shareView.sharePopup = resolver.resolve(SharePopUpComponentViewController.self)
+        }
+        
+        container.register(SharePopUpComponentViewController.self) { _ -> SharePopUpComponentViewController in
+            return SharePopUpComponentViewController()
+        }.initCompleted { (resolver, viewController) in
+            let shareViewController = resolver.resolve(ShareViewController.self)
+            viewController.shareDelegate = shareViewController
         }
         
         container.register(ShareRouterProtocol.self) { resolver -> ShareRouterProtocol in

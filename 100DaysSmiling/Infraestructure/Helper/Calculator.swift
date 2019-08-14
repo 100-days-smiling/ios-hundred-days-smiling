@@ -35,7 +35,7 @@ class Calculator {
     }
     
     static var alreadyShared: Bool {
-//        return false
+        return false
         let dates: [Date] = Defaults[.dates]
         let calendar = Calendar.current
         let today = calendar.startOfDay(for: Date())
