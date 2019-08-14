@@ -28,11 +28,10 @@ class SharePopUpComponentViewController: UIViewController {
     @IBAction func shareButton(_ sender: UIButton) {
         let networkList = self.shareComponent.networkThatICanShare()
         
-        if let network = networkList.first(where: { $0.type.hashValue == sender.tag }) {
-            self.shareDelegate?.presentShareActivity(using: network)
-        } else {
-            // Fallback that failed :(
-            self.dismiss(animated: true, completion: nil)
+        if let network = networkList.first(where: { $0.type.item == sender.tag }) {
+            self.dismiss(animated: true, completion: { [weak self] in
+                self?.shareDelegate?.presentShareActivity(using: network)
+            })
         }
     }
     

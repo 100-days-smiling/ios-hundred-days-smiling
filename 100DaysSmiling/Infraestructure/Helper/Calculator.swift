@@ -13,9 +13,9 @@ extension DefaultsKeys {
 }
 
 class Calculator {
-    static var shareData: [Any] {
+    static var shareData: String {
         let text = "Day \(dayCount) of #100dayssmiling"
-        return [text]
+        return text
     }
     
     static var dayCount: Int {

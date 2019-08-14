@@ -56,17 +56,22 @@ extension ShareViewController {
 // MARK: - Private Methods
 extension ShareViewController: ShareViewControllerProtocol {
     func presentShareActivity(using network: ShareComponentProtocol) {
+        guard let image = self.previewImage else { return  }
+        
         var shareData = Calculator.shareData
-        shareData.append(previewImage!)
-        let activityViewController = UIActivityViewController(activityItems: shareData, applicationActivities: nil)
-        activityViewController.popoverPresentationController?.sourceView = self.view
-        activityViewController.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) -> Void in
-            if completed == true {
-                Calculator.record()
-                self.router.complete()
-            }
-        }
-        self.present(activityViewController, animated: true, completion: nil)
+
+        network.postImageWithCaption(image: image, caption: Calculator.shareData, present: self)
+        
+//        shareData.append(previewImage!)
+//        let activityViewController = UIActivityViewController(activityItems: shareData, applicationActivities: nil)
+//        activityViewController.popoverPresentationController?.sourceView = self.view
+//        activityViewController.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) -> Void in
+//            if completed == true {
+//                Calculator.record()
+//                self.router.complete()
+//            }
+//        }
+//        self.present(activityViewController, animated: true, completion: nil)
     }
     
     func showAlert() {

@@ -21,7 +21,7 @@ class FacebookShareComponent: NSObject, ShareComponentProtocol {
     func postImageWithCaption(image data: UIImage, caption string: String, present viewController: UIViewController) {
         let photo = SharePhoto(image: data, userGenerated: true)
         let photoContent = SharePhotoContent()
-        photoContent.hashtag = Hashtag(string)
+        photoContent.hashtag = Hashtag("#100dayssmiling")
         photoContent.photos = [photo]
         
         
