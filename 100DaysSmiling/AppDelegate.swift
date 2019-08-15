@@ -11,7 +11,6 @@ import OAuthSwift
 import Swinject
 import SwinjectStoryboard
 import SwiftJsonThemeManager
-import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -40,11 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey  : Any] = [:]) -> Bool {
         if (url.scheme == "hundreddayssmiling") {
             OAuthSwift.handle(url: url)
-        }
-        
-        let appId: String = Settings.appID
-        if url.scheme != nil && url.scheme!.hasPrefix("fb\(appId)") && url.host ==  "authorize" {
-            return ApplicationDelegate.shared.application(app, open: url, options: options)
         }
         
         return true

@@ -10,7 +10,6 @@ target '100DaysSmiling' do
   pod 'Swinject', '2.6.2'
   pod 'SwiftyUserDefaults', '~> 4.0.0'
   pod 'SwiftJsonThemeManager'
-  pod 'FBSDKShareKit'
 
   target '100DaysSmilingTests' do
     inherit! :search_paths
