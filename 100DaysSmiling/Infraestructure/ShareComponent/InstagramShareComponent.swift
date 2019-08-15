@@ -23,24 +23,19 @@ class InstagramShareComponent: NSObject, UIDocumentInteractionControllerDelegate
         
     func postImageWithCaption(image data: UIImage, caption string: String, present viewController: UIViewController) {
         
-        let jpgPath = (NSTemporaryDirectory() as NSString).appendingPathComponent(fileNameExtension)
-        
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let saveImagePath = (documentsPath as NSString).appendingPathComponent("instagram.igo")
+        let imageURL = URL(fileURLWithPath: saveImagePath)
+
         do {
-            try data.jpegData(compressionQuality: 0.75)?.write(to: URL(fileURLWithPath: jpgPath), options: .atomic)
+            try data.pngData()?.write(to: imageURL, options: .atomic)
         } catch {
-            print(error)
+            print("Instagram sharing error")
         }
+        documentInteractionController.url = imageURL
+        documentInteractionController.annotation = ["InstagramCaption" : string]
+        documentInteractionController.uti = "com.instagram.exclusivegram"
         
-        let rect = CGRect.zero
-        let fileURL = NSURL.fileURL(withPath: jpgPath)
-        
-        
-        documentInteractionController.url = fileURL
-        documentInteractionController.delegate = self
-        documentInteractionController.uti = uti
-        
-        // adding caption for the image
-        documentInteractionController.annotation = ["InstagramCaption": string]
-        documentInteractionController.presentOpenInMenu(from: rect, in: viewController.view, animated: true)
+        documentInteractionController.presentOpenInMenu(from: viewController.view.bounds, in: viewController.view, animated: true)
     }
 }

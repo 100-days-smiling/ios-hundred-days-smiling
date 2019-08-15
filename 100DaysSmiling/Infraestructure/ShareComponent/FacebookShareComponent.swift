@@ -24,7 +24,6 @@ class FacebookShareComponent: NSObject, ShareComponentProtocol {
         photoContent.hashtag = Hashtag("#100dayssmiling")
         photoContent.photos = [photo]
         
-        
         let shareDialog = ShareDialog(fromViewController: viewController, content: photoContent, delegate: nil)
         shareDialog.show()
     }

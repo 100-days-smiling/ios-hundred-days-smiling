@@ -13,7 +13,7 @@ class SharePopUpComponentViewController: UIViewController {
     @IBOutlet var shareButtons: [UIButton]!
     
     let shareComponent = ShareComponent()
-    var shareDelegate: ShareViewControllerProtocol?
+//    var shareDelegate: ShareViewControllerProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class SharePopUpComponentViewController: UIViewController {
         
         if let network = networkList.first(where: { $0.type.item == sender.tag }) {
             self.dismiss(animated: true, completion: { [weak self] in
-                self?.shareDelegate?.presentShareActivity(using: network)
+//                self?.shareDelegate?.presentShareActivity(using: network)
             })
         }
     }

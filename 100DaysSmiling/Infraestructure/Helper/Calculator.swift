@@ -13,9 +13,9 @@ extension DefaultsKeys {
 }
 
 class Calculator {
-    static var shareData: String {
+    static var shareData: [Any] {
         let text = "Day \(dayCount) of #100dayssmiling"
-        return text
+        return [text]
     }
     
     static var dayCount: Int {
@@ -35,7 +35,7 @@ class Calculator {
     }
     
     static var alreadyShared: Bool {
-        return false
+//        return false
         let dates: [Date] = Defaults[.dates]
         let calendar = Calendar.current
         let today = calendar.startOfDay(for: Date())
