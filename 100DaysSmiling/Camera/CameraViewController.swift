@@ -31,8 +31,6 @@ class CameraViewController: SwiftyCamViewController {
     @IBAction func closeCamera() {
         router.closeCameraFlow()
     }
-    
-    
 }
 
 // MARK: - SwiftyCamViewControllerDelegate
